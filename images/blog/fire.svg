@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a100c"/>
+      <stop offset="100%" stop-color="#080405"/>
+    </linearGradient>
+    <radialGradient id="flameg" cx="50%" cy="70%" r="40%">
+      <stop offset="0%" stop-color="#ff7a10" stop-opacity="0.7"/>
+      <stop offset="60%" stop-color="#ff3b00" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg6)"/>
+  <ellipse cx="400" cy="390" rx="260" ry="70" fill="url(#flameg)"/>
+  <ellipse cx="400" cy="410" rx="160" ry="28" fill="#3a1a0c"/>
+  <path d="M400 140 C340 260 360 330 400 400 C440 330 460 260 400 140Z" fill="#ff6a12"/>
+  <path d="M400 180 C360 270 376 330 400 390 C424 330 440 270 400 180Z" fill="#ffb020"/>
+  <path d="M400 230 C378 300 388 340 400 372 C412 340 422 300 400 230Z" fill="#fff2a8"/>
+  <rect x="250" y="402" width="70" height="14" rx="4" fill="#6b4632" transform="rotate(-18 285 409)"/>
+  <rect x="480" y="402" width="70" height="14" rx="4" fill="#6b4632" transform="rotate(16 515 409)"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c0c18"/>
+      <stop offset="100%" stop-color="#080406"/>
+    </linearGradient>
+    <radialGradient id="omglow" cx="50%" cy="46%" r="40%">
+      <stop offset="0%" stop-color="#f3d27a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg2)"/>
+  <circle cx="400" cy="230" r="190" fill="url(#omglow)"/>
+  <text x="400" y="270" text-anchor="middle" font-size="210" fill="#f3d27a" font-family="serif">ॐ</text>
+  <g fill="none" stroke="#c99212" stroke-width="3" opacity="0.7">
+    <circle cx="400" cy="230" r="150"/>
+    <circle cx="400" cy="230" r="168"/>
+  </g>
+  <g fill="#d4a017">
+    <circle cx="232" cy="230" r="7"/><circle cx="568" cy="230" r="7"/>
+    <circle cx="400" cy="62" r="7"/><circle cx="400" cy="398" r="7"/>
+    <circle cx="281" cy="111" r="6"/><circle cx="519" cy="111" r="6"/>
+    <circle cx="281" cy="349" r="6"/><circle cx="519" cy="349" r="6"/>
+  </g>
+</svg>

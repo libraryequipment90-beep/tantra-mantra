@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a160e"/>
+      <stop offset="55%" stop-color="#140808"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="62%" r="45%">
+      <stop offset="0%" stop-color="#ffb020" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#ff6a12" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="brass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f3d27a"/>
+      <stop offset="50%" stop-color="#c99212"/>
+      <stop offset="100%" stop-color="#7a4e08"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <circle cx="400" cy="310" r="220" fill="url(#glow)"/>
+  <text x="400" y="88" text-anchor="middle" font-size="72" fill="#f3d27a" fill-opacity="0.18" font-family="serif">ॐ</text>
+  <ellipse cx="400" cy="390" rx="150" ry="22" fill="#2a120c"/>
+  <path d="M250 372 Q400 330 550 372 Q520 410 400 418 Q280 410 250 372Z" fill="url(#brass)"/>
+  <ellipse cx="400" cy="368" rx="92" ry="16" fill="#5a2a12"/>
+  <ellipse cx="400" cy="366" rx="70" ry="10" fill="#1a0a06"/>
+  <path d="M392 250 C380 300 388 340 400 358 C412 340 420 300 408 250 C404 270 396 270 392 250Z" fill="#ffb020"/>
+  <path d="M396 268 C390 300 396 330 400 348 C404 330 410 300 404 268Z" fill="#fff2a8"/>
+  <circle cx="400" cy="248" r="7" fill="#ffe7a0"/>
+  <ellipse cx="318" cy="352" rx="28" ry="10" fill="#d4a017" opacity="0.7"/>
+  <ellipse cx="482" cy="352" rx="28" ry="10" fill="#d4a017" opacity="0.7"/>
+  <path d="M300 348 Q318 310 336 348" fill="#c4123c" opacity="0.85"/>
+  <path d="M464 348 Q482 310 500 348" fill="#c4123c" opacity="0.85"/>
+</svg>
