@@ -1,6 +1,4 @@
 :root {
-  --bg: #0b0608;
-  --bg-deep: #070405;
   --cream: #f6efe4;
   --cream-2: #f3eadc;
   --ink: #1a120c;
@@ -10,12 +8,8 @@
   --gold-3: #c99212;
   --rose: #e11d48;
   --rose-2: #c4123c;
-  --card: #14100f;
-  --card-2: #1b1514;
-  --line: rgba(212, 160, 23, 0.28);
   --white: #fff8ee;
   --header: rgba(10, 5, 6, 0.92);
-  --radius: 14px;
   --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
   --font: "Poppins", system-ui, sans-serif;
   --display: "Cormorant Garamond", "Times New Roman", serif;
@@ -817,6 +811,9 @@ textarea { resize: vertical; min-height: 78px; }
   gap: 18px;
 }
 .blog-card {
+  color: inherit;
+  display: block;
+  cursor: pointer;
   border-radius: 14px;
   overflow: hidden;
   background: #140e0d;
@@ -839,7 +836,6 @@ textarea { resize: vertical; min-height: 78px; }
 .blog-meta { padding: 16px 16px 18px; }
 .blog-meta h3 { font-size: 16px; line-height: 1.35; margin-bottom: 8px; color: #fff; }
 .blog-meta time { color: #b7a898; font-size: 12.5px; }
-.blog-card { color: inherit; display: block; cursor: pointer; }
 .blog-meta p { color: #b7a898; font-size: 13px; margin-top: 8px; line-height: 1.5; }
 .blog-grid.listing { grid-template-columns: repeat(3, 1fr); }
 .blog-listing { padding-top: 40px; }
