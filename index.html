@@ -7,13 +7,13 @@
   <meta name="description" content="Powerful Tantra Mantra solutions for a better life. Remove negativity, attract positivity, and get desired results with expert Tantrik guidance." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Noto+Sans+Devanagari:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header" id="top">
     <div class="header-inner">
-      <a class="brand" href="#top">
+      <a class="brand" href="#home">
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 48 56" fill="none">
             <path d="M24 2 L28 18 H44 L31 28 L36 46 L24 36 L12 46 L17 28 L4 18 H20 Z" fill="#d4a017"/>
@@ -29,11 +29,12 @@
       </a>
 
       <nav class="main-nav" id="mainNav">
-        <a href="#top" class="active">Home</a>
+        <a href="#home" class="active">Home</a>
         <a href="#about">About Us</a>
         <a href="#services">Our Services</a>
         <a href="#blog">Blog</a>
         <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -51,14 +52,15 @@
           <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 3.5v3M16 3.5v3M4 10h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
           Book an Appointment
         </a>
-        <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
+  <div class="nav-overlay" id="navOverlay"></div>
 
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-figure" aria-hidden="true">
@@ -122,111 +124,48 @@
         </ul>
       </div>
 
-      <aside class="consult-card">
-        <div class="consult-ornament">ॐ</div>
-        <h2>Get Free Consultation</h2>
-        <p>Tell us your problem, our expert will guide you.</p>
-        <form id="heroForm">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="tel" name="phone" placeholder="Mobile Number" required />
-          <select name="service" required>
-            <option value="" disabled selected>Select Service</option>
-            <option>Love Problem Solution</option>
-            <option>Marriage Problem Solution</option>
-            <option>Vashikaran</option>
-            <option>Black Magic Removal</option>
-            <option>Business Growth</option>
-            <option>Career Problem Solution</option>
-            <option>Health Problem Solution</option>
-            <option>Family Dispute Solution</option>
-          </select>
-          <textarea name="message" rows="3" placeholder="Your Message / Problem" required></textarea>
-          <button class="btn btn-primary btn-full" type="submit">Send Request <span>→</span></button>
-        </form>
+      <aside class="hero-aside">
+        <span class="hero-badge"><span class="badge-om">ॐ</span> Authentic Vedic Guidance</span>
+        <h2>Real answers for life's hardest problems</h2>
+        <p class="hero-aside-lead">Every case is studied privately and matched with the right mantra, ritual and timing — never a generic, one-size solution.</p>
+        <ul class="hero-points">
+          <li>
+            <span class="hp-ico">
+              <svg viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            </span>
+            <div><strong>100% Private</strong><small>Your details never leave the consultation.</small></div>
+          </li>
+          <li>
+            <span class="hp-ico">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 19.5c.7-3.4 3.3-5.2 6.5-5.2s5.8 1.8 6.5 5.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <div><strong>Experienced Tantrik</strong><small>Guided personally, from start to finish.</small></div>
+          </li>
+          <li>
+            <span class="hp-ico">
+              <svg viewBox="0 0 24 24"><path d="M4 5.5h16v10.2H9.5L5.5 19v-3.3H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            <div><strong>Online &amp; In-person</strong><small>Phone, WhatsApp or video from anywhere.</small></div>
+          </li>
+        </ul>
+        <div class="hero-stats">
+          <div><strong>15+</strong><span>Years Experience</span></div>
+          <div><strong>12k+</strong><span>Clients Guided</span></div>
+          <div><strong>30+</strong><span>Cities Served</span></div>
+        </div>
+        <a class="btn btn-primary btn-full" href="#contact">Get Free Consultation <span>→</span></a>
       </aside>
     </div>
   </section>
 
-  <section class="services" id="services">
-    <div class="section-wrap">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow"><span class="trident">ॐ</span> OUR SERVICES</p>
-          <h2>Popular Tantra Mantra Services</h2>
-          <p class="sub">We offer a wide range of spiritual solutions for personal, family and business problems.</p>
-        </div>
-        <a class="text-link" href="#services">View All Services <span>→</span></a>
-      </div>
-      <div class="service-grid">
-        <article class="service-card">
-          <span class="s-icon heart">
-            <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9.2-8.2C1 8.8 2.4 5.5 5.6 5.1 7.6 4.8 9.4 5.9 12 8c2.6-2.1 4.4-3.2 6.4-2.9 3.2.4 4.6 3.7 2.8 6.7C19 15.6 12 20 12 20Z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
-          </span>
-          <h3>Love Problem Solution</h3>
-          <p>Bring back love and strengthen relationships.</p>
-          <a href="#contact">Learn More →</a>
-        </article>
-        <article class="service-card">
-          <span class="s-icon rings">
-            <svg viewBox="0 0 24 24"><circle cx="9" cy="13" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="15" cy="11" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
-          </span>
-          <h3>Marriage Problem Solution</h3>
-          <p>Remove obstacles in marriage and get a happy life.</p>
-          <a href="#contact">Learn More →</a>
-        </article>
-        <article class="service-card">
-          <span class="s-icon magnet">
-            <svg viewBox="0 0 24 24"><path d="M7 4h4v8a3 3 0 0 0 6 0V4h4v8a7 7 0 1 1-14 0V4Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M7 4v3h4V4M17 4v3h4V4" stroke="currentColor" stroke-width="1.7"/></svg>
-          </span>
-          <h3>Vashikaran</h3>
-          <p>Attract or control your desired person.</p>
-          <a href="#contact">Learn More →</a>
-        </article>
-        <article class="service-card">
-          <span class="s-icon skull">
-            <svg viewBox="0 0 24 24"><path d="M12 3.5c4.2 0 7.5 3 7.5 7.2 0 2.4-1 4.5-2.6 5.8v2.2c0 .7-.6 1.3-1.3 1.3h-1.2v-1.5h-4.8V20H8.4c-.7 0-1.3-.6-1.3-1.3v-2.2C5.5 15.2 4.5 13.1 4.5 10.7 4.5 6.5 7.8 3.5 12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="9.2" cy="11" r="1.3" fill="currentColor"/><circle cx="14.8" cy="11" r="1.3" fill="currentColor"/><path d="M10.5 15h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </span>
-          <h3>Black Magic Removal</h3>
-          <p>Get rid of negative energies and evil effects.</p>
-          <a href="#contact">Learn More →</a>
-        </article>
-        <article class="service-card">
-          <span class="s-icon chart">
-            <svg viewBox="0 0 24 24"><path d="M4 18V6M4 18h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="m7 14 4-4 3 2.5 5-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <h3>Business Growth</h3>
-          <p>Increase success, profits and opportunities.</p>
-          <a href="#contact">Learn More →</a>
-        </article>
-        <article class="service-card">
-          <span class="s-icon case">
-            <svg viewBox="0 0 24 24"><rect x="3.5" y="8" width="17" height="11.5" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M9 8V6.4A1.4 1.4 0 0 1 10.4 5h3.2A1.4 1.4 0 0 1 15 6.4V8" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 13h17" stroke="currentColor" stroke-width="1.7"/></svg>
-          </span>
-          <h3>Career Problem Solution</h3>
-          <p>Get success in job and career growth.</p>
-          <a href="#contact">Learn More →</a>
-        </article>
-        <article class="service-card">
-          <span class="s-icon lotus">
-            <svg viewBox="0 0 24 24"><path d="M12 19c-2.4-2.6-7-4.4-7-8.2 0-2 1.5-3.4 3.2-3.4 1.3 0 2.4.7 3.1 1.8C12 8.1 13.1 7.4 14.4 7.4c1.7 0 3.2 1.4 3.2 3.4 0 3.8-4.6 5.6-7 8.2Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 19c1.6-3.6 6.5-4.2 6.5-8.6M12 19C10.4 15.4 5.5 14.8 5.5 10.4M12 7.2V4.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </span>
-          <h3>Health Problem Solution</h3>
-          <p>Get relief from chronic and mystery illnesses.</p>
-          <a href="#contact">Learn More →</a>
-        </article>
-        <article class="service-card">
-          <span class="s-icon family">
-            <svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="8.4" r="2.1" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.8 18.5c.5-3 2.4-4.6 4.4-4.6s3.8 1.6 4.3 4.6M12.8 18.5c.4-2.6 2-4 3.6-4s3.3 1.4 3.7 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          </span>
-          <h3>Family Dispute Solution</h3>
-          <p>Remove conflicts and bring peace in family.</p>
-          <a href="#contact">Learn More →</a>
-        </article>
+  <section class="about" id="about">
+    <div class="page-banner">
+      <div class="section-wrap">
+        <p class="eyebrow gold">ABOUT US</p>
+        <h2>Ancient Knowledge, Modern Solutions</h2>
+        <p class="sub">Trusted tantrik guidance from Varanasi for real-life problems.</p>
       </div>
     </div>
-  </section>
-
-  <section class="about" id="about">
     <div class="about-wrap">
       <div class="about-photo">
         <div class="about-photo-frame">
@@ -243,8 +182,6 @@
         </div>
       </div>
       <div class="about-copy">
-        <p class="eyebrow light">ABOUT US</p>
-        <h2>Ancient Knowledge, Modern Solutions</h2>
         <p class="about-lead">
           We are a team of experienced and trusted Tantrik practitioners who have been serving people for years. With the power of ancient mantras, rituals and spiritual energy, we help you overcome life's challenges and attract positivity.
         </p>
@@ -254,7 +191,7 @@
           <li>Personalized Solutions</li>
           <li>Faith, Trust &amp; Genuine Guidance</li>
         </ul>
-        <a class="btn btn-outline" href="#contact">Know More About Us →</a>
+        <a class="btn btn-outline" href="#" id="knowMoreAbout">Know More About Us →</a>
       </div>
       <blockquote class="about-quote">
         <span class="quote-om">ॐ</span>
@@ -263,19 +200,238 @@
     </div>
   </section>
 
-  <section class="testimonials" id="testimonials">
+  <section class="services" id="services">
+    <div class="page-banner">
+      <div class="section-wrap">
+        <p class="eyebrow"><span class="trident">ॐ</span> OUR SERVICES</p>
+        <h2>Popular Tantra Mantra Services</h2>
+        <p class="sub">Dedicated solutions for love, marriage, protection, career and family peace.</p>
+      </div>
+    </div>
     <div class="section-wrap">
-      <div class="section-head">
+      <p class="services-intro">Every problem is different, so each remedy is prepared only after a private discussion of your situation. Below are the cases we handle most often at our Varanasi ashram. The duration and mode shown are typical — the exact ritual is confirmed after consultation.</p>
+      <div class="service-grid">
+        <article class="service-card" data-service="Love Problem Solution">
+          <div class="s-photo">
+            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&h=400&q=70" alt="Love problem solution" loading="lazy" />
+            <span class="s-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9.2-8.2C1 8.8 2.4 5.5 5.6 5.1 7.6 4.8 9.4 5.9 12 8c2.6-2.1 4.4-3.2 6.4-2.9 3.2.4 4.6 3.7 2.8 6.7C19 15.6 12 20 12 20Z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+            </span>
+          </div>
+          <div class="s-body">
+            <h3>Love Problem Solution</h3>
+            <p class="s-desc">Mantra-based remedies to cool misunderstandings, reopen communication and rebuild genuine affection in love or married life.</p>
+            <ul class="s-list">
+              <li>Breakup, patch-up and one-sided love</li>
+              <li>Lost contact and cold behaviour</li>
+              <li>Trust, jealousy and doubt issues</li>
+            </ul>
+            <div class="s-meta"><span>3–11 days</span><span>Online / In-person</span></div>
+            <span class="s-more">View Details →</span>
+          </div>
+        </article>
+        <article class="service-card" data-service="Marriage Problem Solution">
+          <div class="s-photo">
+            <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=600&h=400&q=70" alt="Marriage problem solution" loading="lazy" />
+            <span class="s-icon">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="13" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="15" cy="11" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+            </span>
+          </div>
+          <div class="s-body">
+            <h3>Marriage Problem Solution</h3>
+            <p class="s-desc">Remove delay, family opposition and repeated matching obstacles so that marriage can finally move ahead with peace and consent.</p>
+            <ul class="s-list">
+              <li>Delay in marriage and mangal dosh</li>
+              <li>Family or community resistance</li>
+              <li>Mistrust or distance after wedding</li>
+            </ul>
+            <div class="s-meta"><span>5–21 days</span><span>Online / In-person</span></div>
+            <span class="s-more">View Details →</span>
+          </div>
+        </article>
+        <article class="service-card" data-service="Vashikaran">
+          <div class="s-photo">
+            <img src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=600&h=400&q=70" alt="Vashikaran" loading="lazy" />
+            <span class="s-icon">
+              <svg viewBox="0 0 24 24"><path d="M7 4h4v8a3 3 0 0 0 6 0V4h4v8a7 7 0 1 1-14 0V4Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M7 4v3h4V4M17 4v3h4V4" stroke="currentColor" stroke-width="1.7"/></svg>
+            </span>
+          </div>
+          <div class="s-body">
+            <h3>Vashikaran</h3>
+            <p class="s-desc">A focused attraction and harmony practice used strictly with ethical intent — to reunite hearts and calm tension, never to act against free will.</p>
+            <ul class="s-list">
+              <li>Reunite with a loved one</li>
+              <li>Restore harmony in a strained bond</li>
+              <li>Discussed only in a private session</li>
+            </ul>
+            <div class="s-meta"><span>3–11 days</span><span>Online / In-person</span></div>
+            <span class="s-more">View Details →</span>
+          </div>
+        </article>
+        <article class="service-card" data-service="Black Magic Removal">
+          <div class="s-photo">
+            <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&h=400&q=70" alt="Black magic removal" loading="lazy" />
+            <span class="s-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 3.5c4.2 0 7.5 3 7.5 7.2 0 2.4-1 4.5-2.6 5.8v2.2c0 .7-.6 1.3-1.3 1.3h-1.2v-1.5h-4.8V20H8.4c-.7 0-1.3-.6-1.3-1.3v-2.2C5.5 15.2 4.5 13.1 4.5 10.7 4.5 6.5 7.8 3.5 12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="9.2" cy="11" r="1.3" fill="currentColor"/><circle cx="14.8" cy="11" r="1.3" fill="currentColor"/><path d="M10.5 15h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <div class="s-body">
+            <h3>Black Magic Removal</h3>
+            <p class="s-desc">Diagnosis and cleansing of evil eye, tantra prayog and lingering negativity, with lasting protection for you, your home and your family.</p>
+            <ul class="s-list">
+              <li>Detection of negative energy</li>
+              <li>Cleansing and shielding ritual</li>
+              <li>Protection for home and family</li>
+            </ul>
+            <div class="s-meta"><span>7–21 days</span><span>Online / In-person</span></div>
+            <span class="s-more">View Details →</span>
+          </div>
+        </article>
+        <article class="service-card" data-service="Business Growth">
+          <div class="s-photo">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&h=400&q=70" alt="Business growth" loading="lazy" />
+            <span class="s-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 18V6M4 18h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="m7 14 4-4 3 2.5 5-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+          <div class="s-body">
+            <h3>Business Growth</h3>
+            <p class="s-desc">Lakshmi and planet-based remedies for stalled sales, blocked deals, partnership stress and constant cash-flow worry.</p>
+            <ul class="s-list">
+              <li>Sales and customer growth</li>
+              <li>Blocked deals and payments</li>
+              <li>Partnership and staff disputes</li>
+            </ul>
+            <div class="s-meta"><span>11–41 days</span><span>Online / In-person</span></div>
+            <span class="s-more">View Details →</span>
+          </div>
+        </article>
+        <article class="service-card" data-service="Career Problem Solution">
+          <div class="s-photo">
+            <img src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?auto=format&fit=crop&w=600&h=400&q=70" alt="Career problem solution" loading="lazy" />
+            <span class="s-icon">
+              <svg viewBox="0 0 24 24"><rect x="3.5" y="8" width="17" height="11.5" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M9 8V6.4A1.4 1.4 0 0 1 10.4 5h3.2A1.4 1.4 0 0 1 15 6.4V8" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 13h17" stroke="currentColor" stroke-width="1.7"/></svg>
+            </span>
+          </div>
+          <div class="s-body">
+            <h3>Career Problem Solution</h3>
+            <p class="s-desc">Mantra support for interviews, stubborn promotion delays, office politics and the loss of confidence that follows them.</p>
+            <ul class="s-list">
+              <li>Job interviews and new offers</li>
+              <li>Promotion and appraisal delays</li>
+              <li>Workplace politics and confidence</li>
+            </ul>
+            <div class="s-meta"><span>7–21 days</span><span>Online / In-person</span></div>
+            <span class="s-more">View Details →</span>
+          </div>
+        </article>
+        <article class="service-card" data-service="Health Problem Solution">
+          <div class="s-photo">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&h=400&q=70" alt="Health problem solution" loading="lazy" />
+            <span class="s-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 19c-2.4-2.6-7-4.4-7-8.2 0-2 1.5-3.4 3.2-3.4 1.3 0 2.4.7 3.1 1.8C12 8.1 13.1 7.4 14.4 7.4c1.7 0 3.2 1.4 3.2 3.4 0 3.8-4.6 5.6-7 8.2Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 19c1.6-3.6 6.5-4.2 6.5-8.6M12 19C10.4 15.4 5.5 14.8 5.5 10.4M12 7.2V4.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <div class="s-body">
+            <h3>Health Problem Solution</h3>
+            <p class="s-desc">Spiritual support, always alongside proper medical care, for chronic, unexplained or stress-linked suffering of body and mind.</p>
+            <ul class="s-list">
+              <li>Chronic or repeating illness</li>
+              <li>Anxiety, fear and poor sleep</li>
+              <li>Protection from negativity</li>
+            </ul>
+            <div class="s-meta"><span>11–41 days</span><span>Online / In-person</span></div>
+            <span class="s-more">View Details →</span>
+          </div>
+        </article>
+        <article class="service-card" data-service="Family Dispute Solution">
+          <div class="s-photo">
+            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=600&h=400&q=70" alt="Family dispute solution" loading="lazy" />
+            <span class="s-icon">
+              <svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="8.4" r="2.1" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.8 18.5c.5-3 2.4-4.6 4.4-4.6s3.8 1.6 4.3 4.6M12.8 18.5c.4-2.6 2-4 3.6-4s3.3 1.4 3.7 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <div class="s-body">
+            <h3>Family Dispute Solution</h3>
+            <p class="s-desc">Peace rituals to settle property fights, in-law conflict and sibling divide, and to calm a restless, tense atmosphere at home.</p>
+            <ul class="s-list">
+              <li>Property and inheritance disputes</li>
+              <li>In-law and family friction</li>
+              <li>Restoring calm and mutual respect</li>
+            </ul>
+            <div class="s-meta"><span>7–21 days</span><span>Online / In-person</span></div>
+            <span class="s-more">View Details →</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog" id="blog">
+    <div class="page-banner">
+      <div class="section-wrap">
+        <p class="eyebrow gold">BLOG &amp; KNOWLEDGE</p>
+        <h2>Spiritual Guidance for a Better Life</h2>
+        <p class="sub">Read our latest articles on Vedic wisdom, Tantra, Mantra and spiritual healing.</p>
+      </div>
+    </div>
+    <div class="section-wrap">
+      <div class="blog-grid">
+        <article class="blog-card" data-article="puja" tabindex="0" role="button">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1602874801007-bd458bb1b8b6?auto=format&fit=crop&w=600&h=400&q=70" alt="Home puja" loading="lazy" />
+          </div>
+          <div class="blog-meta">
+            <h3>How to Perform a Simple Home Puja</h3>
+            <time>April 12, 2025</time>
+          </div>
+        </article>
+        <article class="blog-card" data-article="mantra" tabindex="0" role="button">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&h=400&q=70" alt="Mantra chanting meditation" loading="lazy" />
+          </div>
+          <div class="blog-meta">
+            <h3>Benefits of Mantra Chanting in Daily Life</h3>
+            <time>April 5, 2025</time>
+          </div>
+        </article>
+        <article class="blog-card" data-article="yantra" tabindex="0" role="button">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1614732414444-096e5f1122d5?auto=format&fit=crop&w=600&h=400&q=70" alt="Power of yantras and planets" loading="lazy" />
+          </div>
+          <div class="blog-meta">
+            <h3>Understanding the Power of Yantras</h3>
+            <time>March 28, 2025</time>
+          </div>
+        </article>
+        <article class="blog-card" data-article="energy" tabindex="0" role="button">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=600&h=400&q=70" alt="Signs of negative energy at home" loading="lazy" />
+          </div>
+          <div class="blog-meta">
+            <h3>Signs of Negative Energy in Your Home</h3>
+            <time>March 20, 2025</time>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <div class="page-banner light">
+      <div class="section-wrap page-banner-row">
         <div>
           <p class="eyebrow"><span class="trident">ॐ</span> TESTIMONIALS</p>
           <h2>What Our Clients Say</h2>
           <p class="sub">Real experiences. Real results.</p>
         </div>
         <div class="carousel-nav">
-          <button class="round-btn" id="prevTesti" aria-label="Previous">‹</button>
-          <button class="round-btn" id="nextTesti" aria-label="Next">›</button>
+          <button class="round-btn" id="prevTesti" type="button" aria-label="Previous">‹</button>
+          <button class="round-btn" id="nextTesti" type="button" aria-label="Next">›</button>
         </div>
       </div>
+    </div>
+    <div class="section-wrap">
       <div class="testi-track" id="testiTrack">
         <article class="testi-card">
           <div class="testi-top">
@@ -316,63 +472,59 @@
             <small>Lucknow</small>
           </footer>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="blog" id="blog">
-    <div class="section-wrap">
-      <div class="section-head invert">
-        <div>
-          <p class="eyebrow gold"><span class="book-icon">▣</span> BLOG &amp; KNOWLEDGE</p>
-          <h2>Spiritual Guidance for a Better Life</h2>
-          <p class="sub">Read our latest articles on Vedic wisdom, Tantra, Mantra and spiritual healing.</p>
-        </div>
-        <a class="text-link light" href="#blog">View All Articles <span>→</span></a>
-      </div>
-      <div class="blog-grid">
-        <article class="blog-card">
-          <div class="blog-img i1"></div>
-          <div class="blog-meta">
-            <h3>How to Perform a Simple Home Puja</h3>
-            <time>April 12, 2025</time>
+        <article class="testi-card">
+          <div class="testi-top">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&h=120&q=80" alt="Amit Verma" />
+            <p>“Family fights had gone on for years. After the shanti ritual, we sat together again. Peaceful home at last.”</p>
           </div>
+          <footer>
+            <div>
+              <strong>— Amit Verma</strong>
+              <span class="stars">★★★★★</span>
+            </div>
+            <small>Patna</small>
+          </footer>
         </article>
-        <article class="blog-card">
-          <div class="blog-img i2"></div>
-          <div class="blog-meta">
-            <h3>Benefits of Mantra Chanting in Daily Life</h3>
-            <time>April 5, 2025</time>
+        <article class="testi-card">
+          <div class="testi-top">
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=120&h=120&q=80" alt="Sana Khan" />
+            <p>“Marriage was stuck for three years. The guidance was clear and respectful. We got engaged within two months.”</p>
           </div>
+          <footer>
+            <div>
+              <strong>— Sana Khan</strong>
+              <span class="stars">★★★★★</span>
+            </div>
+            <small>Hyderabad</small>
+          </footer>
         </article>
-        <article class="blog-card">
-          <div class="blog-img i3"></div>
-          <div class="blog-meta">
-            <h3>Understanding the Power of Yantras</h3>
-            <time>March 28, 2025</time>
+        <article class="testi-card">
+          <div class="testi-top">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&h=120&q=80" alt="Vikram Joshi" />
+            <p>“Business was dead after a partnership split. Remedies plus practical advice helped me restart and win clients.”</p>
           </div>
-        </article>
-        <article class="blog-card">
-          <div class="blog-img i4"></div>
-          <div class="blog-meta">
-            <h3>Signs of Negative Energy in Your Home</h3>
-            <time>March 20, 2025</time>
-          </div>
+          <footer>
+            <div>
+              <strong>— Vikram Joshi</strong>
+              <span class="stars">★★★★☆</span>
+            </div>
+            <small>Ahmedabad</small>
+          </footer>
         </article>
       </div>
+      <div class="testi-dots" id="testiDots"></div>
     </div>
   </section>
 
   <section class="faq" id="faq">
-    <div class="section-wrap">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow"><span class="trident">?</span> FAQ</p>
-          <h2>Frequently Asked Questions</h2>
-          <p class="sub">Find answers to common questions about our services and process.</p>
-        </div>
-        <a class="text-link" href="#faq">View All FAQs <span>→</span></a>
+    <div class="page-banner light">
+      <div class="section-wrap">
+        <p class="eyebrow"><span class="trident">?</span> FAQ</p>
+        <h2>Frequently Asked Questions</h2>
+        <p class="sub">Find answers to common questions about our services and process.</p>
       </div>
+    </div>
+    <div class="section-wrap">
       <div class="faq-grid">
         <div class="faq-col">
           <details>
@@ -386,6 +538,14 @@
           <details>
             <summary>Is my information safe and confidential?</summary>
             <p>Yes. Every consultation is strictly confidential. Your identity, problem and ritual details are never shared with anyone.</p>
+          </details>
+          <details>
+            <summary>Do you work online or only in Varanasi?</summary>
+            <p>Both. Photo, name, problem details and a video call are enough for most cases. In-person rituals in Varanasi are arranged when needed.</p>
+          </details>
+          <details>
+            <summary>Is payment required before the first talk?</summary>
+            <p>The first consultation is free. If a ritual is recommended, fees and duration are explained clearly before you decide.</p>
           </details>
         </div>
         <div class="faq-col">
@@ -401,27 +561,44 @@
             <summary>Can I consult for multiple problems at once?</summary>
             <p>Yes. During consultation we assess all concerns together and recommend a combined or sequential remedy so the energy work stays balanced.</p>
           </details>
+          <details>
+            <summary>Can NRIs take your services?</summary>
+            <p>Yes. We regularly guide clients in the Gulf, UK, USA and Canada through WhatsApp and video.</p>
+          </details>
+          <details>
+            <summary>Will you guarantee 100% results?</summary>
+            <p>No honest practitioner guarantees a date. We guarantee authentic method, confidentiality and sincere sadhana. Results vary with karma, timing and your cooperation.</p>
+          </details>
+          <details>
+            <summary>What should I prepare before consulting?</summary>
+            <p>A short timeline of the problem, any previous remedies tried, and date of birth if relevant. Stay in a quiet place for the call.</p>
+          </details>
         </div>
       </div>
     </div>
   </section>
 
   <section class="contact" id="contact">
-    <div class="contact-wrap">
-      <div class="contact-info">
+    <div class="page-banner">
+      <div class="section-wrap">
         <p class="eyebrow gold">CONTACT US</p>
         <h2>Get in Touch</h2>
+        <p class="sub">Have a question or need guidance? We are here to help you.</p>
+      </div>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-info">
         <p>Have a question or need guidance? Reach out to us. We are here to help you on your spiritual journey.</p>
         <ul class="contact-list">
           <li>
-            <span class="c-ico phone">☎</span>
+            <span class="c-ico">☎</span>
             <div>
               <a href="tel:+919876543210">+91 98765 43210</a>
               <small>Call / WhatsApp</small>
             </div>
           </li>
           <li>
-            <span class="c-ico mail">✉</span>
+            <span class="c-ico">✉</span>
             <div>
               <a href="mailto:info@tantramantra.com">info@tantramantra.com</a>
               <small>Send us an email</small>
@@ -436,23 +613,34 @@
           </li>
         </ul>
       </div>
-      <form class="contact-form" id="contactForm">
+      <form class="contact-form" id="contactForm" novalidate>
         <div class="row">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="tel" name="phone" placeholder="Your Mobile Number" required />
+          <div class="field">
+            <input type="text" name="name" placeholder="Your Name" required autocomplete="name" maxlength="60" />
+          </div>
+          <div class="field">
+            <input type="tel" name="phone" placeholder="Your Mobile Number" required autocomplete="tel" inputmode="numeric" maxlength="14" />
+          </div>
         </div>
-        <select name="service" required>
-          <option value="" disabled selected>Select Service</option>
-          <option>Love Problem Solution</option>
-          <option>Marriage Problem Solution</option>
-          <option>Vashikaran</option>
-          <option>Black Magic Removal</option>
-          <option>Business Growth</option>
-          <option>Career Problem Solution</option>
-          <option>Health Problem Solution</option>
-          <option>Family Dispute Solution</option>
-        </select>
-        <textarea name="message" rows="3" placeholder="Your Message" required></textarea>
+        <div class="field">
+          <input type="email" name="email" placeholder="Email (optional)" autocomplete="email" />
+        </div>
+        <div class="field">
+          <select name="service" required>
+            <option value="" disabled selected>Select Service</option>
+            <option value="Love Problem Solution">Love Problem Solution</option>
+            <option value="Marriage Problem Solution">Marriage Problem Solution</option>
+            <option value="Vashikaran">Vashikaran</option>
+            <option value="Black Magic Removal">Black Magic Removal</option>
+            <option value="Business Growth">Business Growth</option>
+            <option value="Career Problem Solution">Career Problem Solution</option>
+            <option value="Health Problem Solution">Health Problem Solution</option>
+            <option value="Family Dispute Solution">Family Dispute Solution</option>
+          </select>
+        </div>
+        <div class="field">
+          <textarea name="message" rows="3" placeholder="Your Message" required maxlength="800"></textarea>
+        </div>
         <button class="btn btn-primary btn-full" type="submit">Send Message <span>→</span></button>
       </form>
     </div>
@@ -460,7 +648,7 @@
 
   <footer class="site-footer">
     <div class="footer-main">
-      <a class="brand" href="#top">
+      <a class="brand" href="#home">
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 48 56" fill="none">
             <path d="M24 2 L28 18 H44 L31 28 L36 46 L24 36 L12 46 L17 28 L4 18 H20 Z" fill="#d4a017"/>
@@ -475,30 +663,41 @@
         </span>
       </a>
       <nav>
-        <a href="#top">Home</a>
+        <a href="#home">Home</a>
         <a href="#about">About Us</a>
         <a href="#services">Our Services</a>
         <a href="#blog">Blog</a>
         <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="socials">
         <a href="#" aria-label="Facebook">f</a>
         <a href="#" aria-label="Instagram">ig</a>
         <a href="#" aria-label="YouTube">▶</a>
-        <a href="https://wa.me/919876543210" aria-label="WhatsApp">wa</a>
+        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">wa</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Tantra Mantra. All Rights Reserved.</p>
+      <p>© 2026 Tantra Mantra. All Rights Reserved.</p>
       <div>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms &amp; Conditions</a>
+        <a href="#privacy" id="privacyLink">Privacy Policy</a>
+        <a href="#terms" id="termsLink">Terms &amp; Conditions</a>
       </div>
     </div>
   </footer>
 
+  <a class="wa-float" href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 11.5A8.5 8.5 0 0 1 7.2 19.4L4 20.5l1.2-3.1A8.5 8.5 0 1 1 20 11.5Zm-8.4 6.6c4 0 7.2-3.2 7.2-7.1 0-4-3.2-7.2-7.2-7.2s-7.2 3.2-7.2 7.2c0 1.5.5 2.9 1.3 4.1l-.8 2.4 2.5-.8a7.1 7.1 0 0 0 4.2 1.4Zm4-5.3c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1l-.7.8c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.4.1-.3c0-.1 0-.3-.1-.4l-.6-1.5c-.2-.4-.3-.3-.5-.3h-.4c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3c.1.2 1.6 2.5 3.9 3.4 2.3.9 2.3.6 2.7.6.4 0 1.2-.5 1.4-1 .2-.5.2-.9.1-1 0-.1-.2-.1-.4-.2Z"/></svg>
+  </a>
   <div class="toast" id="toast" role="status"></div>
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-panel">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button>
+      <h3 id="modalTitle"></h3>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
   <script src="main.js"></script>
 </body>
 </html>
