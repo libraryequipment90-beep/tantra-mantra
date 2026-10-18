@@ -767,22 +767,52 @@
   </footer>
 
   <div class="mantra-page" id="mantraModal" hidden>
-    <article class="mantra-page-body" role="dialog" aria-modal="true" aria-labelledby="mantraModalTitle">
-      <div class="mantra-page-tools">
-        <button class="btn btn-outline dark" id="mantraModalClose" type="button">← Back</button>
-        <p class="eyebrow" id="mantraModalType"></p>
-        <button class="btn btn-outline dark" id="copyMantra" type="button">Copy Text</button>
+    <div class="mantra-page-inner">
+      <div class="mantra-page-bar">
+        <button class="mantra-bar-btn" id="mantraModalClose" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+          Back
+        </button>
+        <span class="mantra-bar-title">Sacred Text</span>
+        <button class="mantra-bar-btn mantra-bar-copy" id="copyMantra" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copy Text
+        </button>
       </div>
-      <h1 id="mantraModalTitle"></h1>
-      <p class="mantra-deity" id="mantraModalDeity"></p>
-      <div class="mantra-script" id="mantraModalText"></div>
-      <p class="mantra-meaning" id="mantraModalMeaning"></p>
-      <p class="mantra-note" id="mantraModalNote"></p>
-      <p class="mantra-free">Free to read and chant. No consultation required.</p>
-      <div class="mantra-actions">
-        <button class="btn btn-primary" id="mantraModalCloseBtn" type="button">← Back to Mantras</button>
-      </div>
-    </article>
+      <article class="mantra-page-body" role="dialog" aria-modal="true" aria-labelledby="mantraModalTitle">
+        <header class="mantra-hero">
+          <div class="mantra-badges">
+            <span class="mantra-type" id="mantraModalType"></span>
+            <span class="mantra-deity" id="mantraModalDeity"></span>
+          </div>
+          <h1 id="mantraModalTitle"></h1>
+        </header>
+
+        <section class="mantra-script-card" aria-label="Mantra text">
+          <div class="mantra-script-head">
+            <span class="mantra-script-label"><span class="om">ॐ</span> Mantra Text</span>
+            <span class="mantra-script-hint">Chant with a steady breath</span>
+          </div>
+          <div class="mantra-script" id="mantraModalText"></div>
+        </section>
+
+        <div class="mantra-info-grid">
+          <section class="mantra-info">
+            <h2>Meaning</h2>
+            <p id="mantraModalMeaning"></p>
+          </section>
+          <section class="mantra-info">
+            <h2>How to chant</h2>
+            <p id="mantraModalNote"></p>
+          </section>
+        </div>
+
+        <div class="mantra-actions">
+          <button class="btn btn-primary" id="mantraModalCloseBtn" type="button">← Back to Mantras</button>
+          <a class="btn btn-outline dark" href="#contact" id="mantraConsultBtn">Book a consultation <span>→</span></a>
+        </div>
+      </article>
+    </div>
   </div>
   <div class="modal-overlay" id="serviceModal" hidden>
     <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">

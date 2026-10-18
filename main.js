@@ -624,10 +624,13 @@ function renderMantras() {
   }
   mantraGrid.innerHTML = shown.map((item) => `
     <button type="button" class="mantra-item" data-index="${sacredTexts.indexOf(item)}">
-      <span class="tag">${item.type.toUpperCase()}</span>
+      <span class="mantra-top">
+        <span class="tag">${item.type.toUpperCase()}</span>
+        <span class="deity-name">${item.deity}</span>
+      </span>
       <h3>${item.title}</h3>
       <p class="preview">${item.preview}</p>
-      <span class="deity-name">${item.deity}</span>
+      <span class="view-more">Read mantra <span>→</span></span>
     </button>
   `).join("");
   mantraGrid.querySelectorAll(".mantra-item").forEach((btn) => {
@@ -657,7 +660,9 @@ function openMantraModal(i) {
   currentMantraText = item.text;
   document.getElementById("mantraModalType").textContent = item.type.toUpperCase();
   document.getElementById("mantraModalTitle").textContent = item.title;
-  document.getElementById("mantraModalDeity").textContent = item.deity;
+  const deityEl = document.getElementById("mantraModalDeity");
+  deityEl.textContent = item.deity;
+  deityEl.hidden = item.deity.toLowerCase() === item.type.toLowerCase();
   document.getElementById("mantraModalText").innerHTML = versesFromText(item.text)
     .map((verse) => `<p class="shloka">${escapeHtml(verse)}</p>`)
     .join("");
@@ -693,6 +698,7 @@ document.getElementById("deityFilters")?.querySelectorAll(".mini-chip").forEach(
 
 document.getElementById("mantraModalClose")?.addEventListener("click", closeMantraModal);
 document.getElementById("mantraModalCloseBtn")?.addEventListener("click", closeMantraModal);
+document.getElementById("mantraConsultBtn")?.addEventListener("click", closeMantraModal);
 mantraModal?.addEventListener("click", (e) => {
   if (e.target === mantraModal) closeMantraModal();
 });
