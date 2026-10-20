@@ -257,42 +257,57 @@
 
   <section class="mantras page-section" id="mantras">
     <div class="section-wrap">
-      <div class="section-head">
+      <div class="mantra-library-head">
         <div>
           <p class="eyebrow"><span class="trident">ॐ</span> SACRED TEXTS</p>
           <h2>Tantra Mantra, Stotra &amp; Raksha Kavach</h2>
-          <p class="sub">Devi-devta beej mantra, stotra and full raksha kavach for protection, sadhana and daily japa. Sit clean, face east or north, and keep a steady count.</p>
+          <p class="sub">Devi-devta beej mantra, stotra and raksha kavach for protection, sadhana and daily japa.</p>
         </div>
         <a class="text-link home-only" href="#mantras">View All Mantras <span>→</span></a>
+        <label class="mantra-search" for="mantraSearch">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+          <input id="mantraSearch" type="search" placeholder="Search mantra, deity or verse" autocomplete="off" />
+        </label>
       </div>
-      <div class="mantra-filters" id="typeFilters">
-        <button type="button" class="chip active" data-type="all">All</button>
-        <button type="button" class="chip" data-type="mantra">Mantra</button>
-        <button type="button" class="chip" data-type="stotra">Stotra</button>
-        <button type="button" class="chip" data-type="kavach">Kavach</button>
-        <button type="button" class="chip" data-type="raksha">Raksha</button>
-        <button type="button" class="chip" data-type="shabar">Shabar</button>
+
+      <div class="mantra-toolbar">
+        <div class="mantra-filters" id="typeFilters" role="tablist" aria-label="Mantra type">
+          <button type="button" class="chip active" data-type="all">All</button>
+          <button type="button" class="chip" data-type="mantra">Mantra</button>
+          <button type="button" class="chip" data-type="stotra">Stotra</button>
+          <button type="button" class="chip" data-type="kavach">Kavach</button>
+          <button type="button" class="chip" data-type="raksha">Raksha</button>
+          <button type="button" class="chip" data-type="shabar">Shabar</button>
+        </div>
+        <div class="deity-row">
+          <span class="deity-label">Deity</span>
+          <div class="deity-filters" id="deityFilters" role="tablist" aria-label="Deity">
+            <button type="button" class="mini-chip active" data-deity="all">All</button>
+            <button type="button" class="mini-chip" data-deity="Ganesha">Ganesha</button>
+            <button type="button" class="mini-chip" data-deity="Shiva">Shiva</button>
+            <button type="button" class="mini-chip" data-deity="Vishnu">Vishnu</button>
+            <button type="button" class="mini-chip" data-deity="Durga">Durga</button>
+            <button type="button" class="mini-chip" data-deity="Lakshmi">Lakshmi</button>
+            <button type="button" class="mini-chip" data-deity="Saraswati">Saraswati</button>
+            <button type="button" class="mini-chip" data-deity="Hanuman">Hanuman</button>
+            <button type="button" class="mini-chip" data-deity="Krishna">Krishna</button>
+            <button type="button" class="mini-chip" data-deity="Kali">Kali</button>
+            <button type="button" class="mini-chip" data-deity="Bhairav">Bhairav</button>
+            <button type="button" class="mini-chip" data-deity="Baglamukhi">Baglamukhi</button>
+            <button type="button" class="mini-chip" data-deity="Narasimha">Narasimha</button>
+            <button type="button" class="mini-chip" data-deity="Navagraha">Navagraha</button>
+            <button type="button" class="mini-chip" data-deity="Surya">Surya / Gayatri</button>
+            <button type="button" class="mini-chip" data-deity="Rama">Rama</button>
+            <button type="button" class="mini-chip" data-deity="Shabar">Shabar / Nath</button>
+          </div>
+        </div>
       </div>
-      <div class="deity-filters" id="deityFilters">
-        <button type="button" class="mini-chip active" data-deity="all">All Deities</button>
-        <button type="button" class="mini-chip" data-deity="Ganesha">Ganesha</button>
-        <button type="button" class="mini-chip" data-deity="Shiva">Shiva</button>
-        <button type="button" class="mini-chip" data-deity="Vishnu">Vishnu</button>
-        <button type="button" class="mini-chip" data-deity="Durga">Durga</button>
-        <button type="button" class="mini-chip" data-deity="Lakshmi">Lakshmi</button>
-        <button type="button" class="mini-chip" data-deity="Saraswati">Saraswati</button>
-        <button type="button" class="mini-chip" data-deity="Hanuman">Hanuman</button>
-        <button type="button" class="mini-chip" data-deity="Krishna">Krishna</button>
-        <button type="button" class="mini-chip" data-deity="Kali">Kali</button>
-        <button type="button" class="mini-chip" data-deity="Bhairav">Bhairav</button>
-        <button type="button" class="mini-chip" data-deity="Baglamukhi">Baglamukhi</button>
-        <button type="button" class="mini-chip" data-deity="Narasimha">Narasimha</button>
-        <button type="button" class="mini-chip" data-deity="Navagraha">Navagraha</button>
-        <button type="button" class="mini-chip" data-deity="Surya">Surya / Gayatri</button>
-        <button type="button" class="mini-chip" data-deity="Rama">Rama</button>
-        <button type="button" class="mini-chip" data-deity="Shabar">Shabar / Nath</button>
-      </div>
+
+      <div class="mantra-meta" id="mantraMeta"></div>
       <div class="mantra-grid" id="mantraGrid"></div>
+      <div class="mantra-more-wrap">
+        <button type="button" class="btn btn-outline dark" id="mantraLoadMore" hidden>Load more mantras</button>
+      </div>
     </div>
   </section>
 

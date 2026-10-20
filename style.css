@@ -31,8 +31,11 @@ header[id] {
 }
 .page-section { display: none; }
 .page-section.is-visible { display: block; }
-body.home-view .mantra-filters,
-body.home-view .deity-filters { display: none; }
+body.home-view .mantra-toolbar,
+body.home-view .mantra-search,
+body.home-view .mantra-meta,
+body.home-view .mantra-more-wrap { display: none; }
+body.home-view .mantra-library-head { grid-template-columns: 1fr auto; }
 body.home-view .testi-card:nth-child(n+4) { display: none; }
 body.home-view .carousel-nav { display: none; }
 .home-only { display: none; }
@@ -631,50 +634,188 @@ textarea { resize: vertical; min-height: 78px; }
 /* Mantras */
 .mantras {
   background: var(--cream);
-  padding: 16px 0 64px;
+  padding: 18px 0 72px;
 }
-.mantras .section-head { margin-bottom: 24px; }
-.mantra-filters, .deity-filters {
+.mantra-library-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+  align-items: start;
+  gap: 12px 28px;
+  margin-bottom: 22px;
+}
+.mantra-library-head > div { grid-column: 1; }
+.mantra-library-head .home-only {
+  grid-column: 2;
+  align-self: center;
+  justify-self: end;
+}
+.mantra-library-head h2 {
+  font-family: var(--display);
+  font-size: clamp(30px, 3.4vw, 42px);
+  line-height: 1.12;
+  color: #1c120c;
+  margin: 4px 0 8px;
+}
+.mantra-library-head .sub {
+  max-width: 52ch;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+.mantra-search {
+  grid-column: 2;
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-.deity-filters { margin-bottom: 20px; }
-.chip, .mini-chip {
-  border: 1px solid #e6d8c6;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 999px;
   background: #fff;
+  border: 1px solid #eadccb;
+  color: #6b5b4e;
+}
+.mantra-search svg { width: 16px; height: 16px; flex-shrink: 0; }
+.mantra-search input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 13.5px;
+  color: #1c120c;
+}
+.mantra-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.62);
+  border: 1px solid #eadccb;
+}
+.mantra-filters {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  padding: 4px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #eadccb;
+  box-shadow: 0 8px 20px rgba(80,40,20,0.04);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.mantra-filters::-webkit-scrollbar { display: none; }
+.deity-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.deity-row::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: calc(100% - 6px);
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(255,255,255,0), #fff8ef);
+}
+.deity-label {
+  flex-shrink: 0;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--gold-3);
+}
+.deity-filters {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  overflow-x: auto;
+  padding: 2px 0 6px;
+  scrollbar-width: thin;
+  scrollbar-color: #d9cbb8 transparent;
+}
+.deity-filters::-webkit-scrollbar { height: 4px; }
+.deity-filters::-webkit-scrollbar-thumb { background: #d9cbb8; border-radius: 4px; }
+.chip, .mini-chip {
+  flex-shrink: 0;
+  border: 0;
+  background: transparent;
   color: #4a3b32;
   border-radius: 999px;
-  padding: 8px 14px;
+  padding: 8px 16px;
   font-size: 13px;
   font-weight: 600;
+  white-space: nowrap;
 }
-.mini-chip { padding: 6px 12px; font-size: 12.5px; font-weight: 500; }
-.chip.active, .mini-chip.active {
+.mini-chip {
+  padding: 6px 12px;
+  font-size: 12.5px;
+  font-weight: 500;
+  border: 1px solid #eadccb;
+  background: #fff;
+}
+.chip.active {
+  background: #1a120c;
+  color: #f3d27a;
+}
+.mini-chip.active {
   background: #1a120c;
   color: #f3d27a;
   border-color: #1a120c;
 }
+.mantra-meta {
+  margin: 0 2px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: #8a7564;
+}
+.mantra-empty {
+  grid-column: 1 / -1;
+  padding: 28px 18px;
+  text-align: center;
+  color: var(--muted);
+  background: rgba(255,255,255,0.7);
+  border: 1px dashed #eadccb;
+  border-radius: 16px;
+}
 .mantra-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  align-items: start;
+  gap: 16px;
+  align-items: stretch;
+}
+.mantra-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+#mantraLoadMore {
+  min-width: 220px;
+  background: #fff;
 }
 .mantra-item {
   position: relative;
   text-align: left;
-  background: #fff;
+  background: linear-gradient(180deg, #fffdf8, #fff);
   border: 1px solid #eee3d4;
-  border-radius: 14px;
-  padding: 16px 18px 14px;
+  border-radius: 18px;
+  padding: 18px 18px 16px;
   cursor: pointer;
   font: inherit;
   color: inherit;
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 10px;
+  min-height: 168px;
   overflow: hidden;
   transition: 0.22s ease;
 }
@@ -728,7 +869,9 @@ textarea { resize: vertical; min-height: 78px; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: 2px;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid #f1e6d7;
   font-size: 12px;
   font-weight: 700;
   color: var(--rose);
@@ -882,10 +1025,9 @@ textarea { resize: vertical; min-height: 78px; }
 .mantra-script {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 10px 40px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   color: #f7e3a8;
   font-family: "Noto Sans Devanagari", var(--display);
   font-size: clamp(17px, 2vw, 20px);
@@ -1237,11 +1379,16 @@ details p {
   .hero { min-height: auto; }
   .hero-inner { padding: 42px 0 40px; }
   .trust-row { flex-direction: column; gap: 12px; }
-  .mantra-script { grid-template-columns: 1fr; }
   .mantra-info-grid { grid-template-columns: 1fr; }
   .mantra-script-card { padding: 18px 18px 20px; }
   .mantra-script-hint { display: none; }
   .mantra-hero h1 { letter-spacing: -0.2px; }
   .mantra-page-bar { padding: 10px 0; }
   .mantra-bar-title { display: none; }
+  .deity-row { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .mantra-filters { width: 100%; }
+  .mantra-library-head,
+  body.home-view .mantra-library-head { grid-template-columns: 1fr; }
+  .mantra-library-head .home-only,
+  .mantra-search { grid-column: 1; width: 100%; }
 }

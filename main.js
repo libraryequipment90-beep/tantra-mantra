@@ -606,20 +606,47 @@ if (typeof rakshaMantras !== "undefined") {
 
 const mantraGrid = document.getElementById("mantraGrid");
 const mantraModal = document.getElementById("mantraModal");
+const mantraMeta = document.getElementById("mantraMeta");
+const mantraLoadMore = document.getElementById("mantraLoadMore");
+const mantraSearch = document.getElementById("mantraSearch");
 let typeFilter = "all";
 let deityFilter = "all";
+let mantraQuery = "";
+let mantraPage = 1;
+const PAGE_SIZE = 12;
 
-function renderMantras() {
-  if (!mantraGrid) return;
+function filteredMantras() {
   const compact = document.body.classList.contains("home-view");
-  const list = sacredTexts.filter((item) => {
+  const query = mantraQuery.trim().toLowerCase();
+  return sacredTexts.filter((item) => {
     const typeOk = compact || typeFilter === "all" || item.type === typeFilter;
     const deityOk = compact || deityFilter === "all" || item.deity === deityFilter;
-    return typeOk && deityOk;
+    const searchOk = !query || [item.title, item.deity, item.type, item.preview, item.text]
+      .join(" ")
+      .toLowerCase()
+      .includes(query);
+    return typeOk && deityOk && (compact || searchOk);
   });
-  const shown = compact ? list.slice(0, 6) : list;
+}
+
+function renderMantras(resetPage = true) {
+  if (!mantraGrid) return;
+  const compact = document.body.classList.contains("home-view");
+  if (resetPage) mantraPage = 1;
+  const list = filteredMantras();
+  const limit = compact ? 6 : PAGE_SIZE * mantraPage;
+  const shown = list.slice(0, limit);
+  if (mantraMeta) {
+    mantraMeta.hidden = compact;
+    mantraMeta.textContent = list.length
+      ? `${shown.length} of ${list.length} sacred texts`
+      : "No texts in this combination";
+  }
+  if (mantraLoadMore) {
+    mantraLoadMore.hidden = compact || shown.length >= list.length;
+  }
   if (!shown.length) {
-    mantraGrid.innerHTML = "<p class='sub'>No texts in this combination. Try another filter.</p>";
+    mantraGrid.innerHTML = "<p class='mantra-empty'>No texts in this combination. Try another filter.</p>";
     return;
   }
   mantraGrid.innerHTML = shown.map((item) => `
@@ -630,7 +657,7 @@ function renderMantras() {
       </span>
       <h3>${item.title}</h3>
       <p class="preview">${item.preview}</p>
-      <span class="view-more">Read mantra <span>→</span></span>
+      <span class="view-more">Open sacred text <span>→</span></span>
     </button>
   `).join("");
   mantraGrid.querySelectorAll(".mantra-item").forEach((btn) => {
@@ -683,6 +710,7 @@ document.getElementById("typeFilters")?.querySelectorAll(".chip").forEach((btn) 
     document.querySelectorAll("#typeFilters .chip").forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
     typeFilter = btn.dataset.type || "all";
+    btn.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
     renderMantras();
   });
 });
@@ -692,10 +720,19 @@ document.getElementById("deityFilters")?.querySelectorAll(".mini-chip").forEach(
     document.querySelectorAll("#deityFilters .mini-chip").forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
     deityFilter = btn.dataset.deity || "all";
+    btn.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
     renderMantras();
   });
 });
 
+mantraLoadMore?.addEventListener("click", () => {
+  mantraPage += 1;
+  renderMantras(false);
+});
+mantraSearch?.addEventListener("input", () => {
+  mantraQuery = mantraSearch.value || "";
+  renderMantras(true);
+});
 document.getElementById("mantraModalClose")?.addEventListener("click", closeMantraModal);
 document.getElementById("mantraModalCloseBtn")?.addEventListener("click", closeMantraModal);
 document.getElementById("mantraConsultBtn")?.addEventListener("click", closeMantraModal);
