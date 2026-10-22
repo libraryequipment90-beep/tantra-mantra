@@ -604,6 +604,10 @@ if (typeof rakshaMantras !== "undefined") {
   sacredTexts.push(...rakshaMantras);
 }
 
+if (typeof yantraMantras !== "undefined") {
+  sacredTexts.push(...yantraMantras);
+}
+
 const mantraGrid = document.getElementById("mantraGrid");
 const mantraModal = document.getElementById("mantraModal");
 const mantraMeta = document.getElementById("mantraMeta");
@@ -693,16 +697,16 @@ function openMantraModal(i) {
   document.getElementById("mantraModalText").innerHTML = versesFromText(item.text)
     .map((verse) => `<p class="shloka">${escapeHtml(verse)}</p>`)
     .join("");
-  document.getElementById("mantraModalMeaning").textContent = item.meaning;
-  document.getElementById("mantraModalNote").textContent = item.note;
   mantraModal.hidden = false;
-  document.body.style.overflow = "hidden";
+  document.documentElement.classList.add("mantra-open");
+  document.body.classList.add("mantra-open");
 }
 
 function closeMantraModal() {
   if (!mantraModal) return;
   mantraModal.hidden = true;
-  document.body.style.overflow = "";
+  document.documentElement.classList.remove("mantra-open");
+  document.body.classList.remove("mantra-open");
 }
 
 document.getElementById("typeFilters")?.querySelectorAll(".chip").forEach((btn) => {
@@ -720,7 +724,6 @@ document.getElementById("deityFilters")?.querySelectorAll(".mini-chip").forEach(
     document.querySelectorAll("#deityFilters .mini-chip").forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
     deityFilter = btn.dataset.deity || "all";
-    btn.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
     renderMantras();
   });
 });
@@ -734,8 +737,6 @@ mantraSearch?.addEventListener("input", () => {
   renderMantras(true);
 });
 document.getElementById("mantraModalClose")?.addEventListener("click", closeMantraModal);
-document.getElementById("mantraModalCloseBtn")?.addEventListener("click", closeMantraModal);
-document.getElementById("mantraConsultBtn")?.addEventListener("click", closeMantraModal);
 mantraModal?.addEventListener("click", (e) => {
   if (e.target === mantraModal) closeMantraModal();
 });
