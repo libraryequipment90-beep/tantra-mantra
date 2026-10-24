@@ -259,40 +259,39 @@
     <div class="section-wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow"><span class="trident">ॐ</span> SACRED TEXTS</p>
-          <h2>Tantra Mantra, Stotra &amp; Raksha Kavach</h2>
-          <p class="sub">Devi-devta beej mantra, stotra and full raksha kavach for protection, sadhana and daily japa. Sit clean, face east or north, and keep a steady count.</p>
+          <p class="eyebrow"><span class="trident">ॐ</span> SIDDH GUPT SHABAR</p>
+          <h2>Prachin Siddh Shabar Mantra</h2>
+          <p class="sub">Sirf prachin, siddh aur gupt Shabar mantra. Guru aadesh, raksha, nazar aur raat-bhay ke liye. Shraddha se padho, kisi ka nuksaan mat maango.</p>
         </div>
         <a class="text-link home-only" href="#mantras">View All Mantras <span>→</span></a>
       </div>
-      <div class="mantra-filters" id="typeFilters">
-        <button type="button" class="chip active" data-type="all">All</button>
-        <button type="button" class="chip" data-type="mantra">Mantra</button>
-        <button type="button" class="chip" data-type="stotra">Stotra</button>
-        <button type="button" class="chip" data-type="kavach">Kavach</button>
-        <button type="button" class="chip" data-type="raksha">Raksha</button>
-        <button type="button" class="chip" data-type="shabar">Shabar</button>
+      <div class="mantra-library">
+        <aside class="mantra-sidebar">
+          <div class="mantra-side-block">
+            <p class="mantra-side-label">Devta</p>
+            <div class="mantra-deity-list" id="deityFilters">
+              <button type="button" class="mantra-deity-btn active" data-deity="all">Sab</button>
+              <button type="button" class="mantra-deity-btn" data-deity="Nath">Nath / Gorakhnath</button>
+              <button type="button" class="mantra-deity-btn" data-deity="Hanuman">Hanuman</button>
+              <button type="button" class="mantra-deity-btn" data-deity="Shiva">Shiva</button>
+              <button type="button" class="mantra-deity-btn" data-deity="Durga">Durga</button>
+              <button type="button" class="mantra-deity-btn" data-deity="Kali">Kali</button>
+              <button type="button" class="mantra-deity-btn" data-deity="Bhairav">Bhairav</button>
+              <button type="button" class="mantra-deity-btn" data-deity="Baglamukhi">Baglamukhi</button>
+            </div>
+          </div>
+        </aside>
+        <div class="mantra-main">
+          <div class="mantra-toolbar">
+            <label class="mantra-search">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16.2 16.2 20 20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <input type="search" id="mantraSearch" placeholder="Shabar mantra ya devta dhundho..." autocomplete="off" />
+            </label>
+            <p class="mantra-count" id="mantraCount"></p>
+          </div>
+          <div class="mantra-grid" id="mantraGrid"></div>
+        </div>
       </div>
-      <div class="deity-filters" id="deityFilters">
-        <button type="button" class="mini-chip active" data-deity="all">All Deities</button>
-        <button type="button" class="mini-chip" data-deity="Ganesha">Ganesha</button>
-        <button type="button" class="mini-chip" data-deity="Shiva">Shiva</button>
-        <button type="button" class="mini-chip" data-deity="Vishnu">Vishnu</button>
-        <button type="button" class="mini-chip" data-deity="Durga">Durga</button>
-        <button type="button" class="mini-chip" data-deity="Lakshmi">Lakshmi</button>
-        <button type="button" class="mini-chip" data-deity="Saraswati">Saraswati</button>
-        <button type="button" class="mini-chip" data-deity="Hanuman">Hanuman</button>
-        <button type="button" class="mini-chip" data-deity="Krishna">Krishna</button>
-        <button type="button" class="mini-chip" data-deity="Kali">Kali</button>
-        <button type="button" class="mini-chip" data-deity="Bhairav">Bhairav</button>
-        <button type="button" class="mini-chip" data-deity="Baglamukhi">Baglamukhi</button>
-        <button type="button" class="mini-chip" data-deity="Narasimha">Narasimha</button>
-        <button type="button" class="mini-chip" data-deity="Navagraha">Navagraha</button>
-        <button type="button" class="mini-chip" data-deity="Surya">Surya / Gayatri</button>
-        <button type="button" class="mini-chip" data-deity="Rama">Rama</button>
-        <button type="button" class="mini-chip" data-deity="Shabar">Shabar / Nath</button>
-      </div>
-      <div class="mantra-grid" id="mantraGrid"></div>
     </div>
   </section>
 
@@ -776,11 +775,12 @@
       <h1 id="mantraModalTitle"></h1>
       <p class="mantra-deity" id="mantraModalDeity"></p>
       <div class="mantra-script" id="mantraModalText"></div>
-      <p class="mantra-meaning" id="mantraModalMeaning"></p>
-      <p class="mantra-note" id="mantraModalNote"></p>
-      <p class="mantra-free">Free to read and chant. No consultation required.</p>
-      <div class="mantra-actions">
-        <button class="btn btn-primary" id="mantraModalCloseBtn" type="button">← Back to Mantras</button>
+      <div class="mantra-meta">
+        <span class="mantra-meta-label">Arth</span>
+        <p class="mantra-meaning" id="mantraModalMeaning"></p>
+        <span class="mantra-meta-label">Vidhi</span>
+        <p class="mantra-note" id="mantraModalNote"></p>
+        <p class="mantra-free">Sampoorna paath. Free to read and chant. No consultation required.</p>
       </div>
     </article>
   </div>
@@ -800,8 +800,6 @@
     </div>
   </div>
   <div class="toast" id="toast" role="status"></div>
-  <script src="shabar-mantras.js"></script>
-  <script src="raksha-mantras.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
