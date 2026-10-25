@@ -341,6 +341,177 @@ const sacredTexts = [
     text: "ॐ नमो महादेवाय।\nतन मन आत्मा रक्षित हो।\nअनिष्ट स्पर्श न हो।\nनजर लगे तो काटो, टोना टोटका जाओ।\nशिव की दुहाई।\nफुरे महादेव वाचा॥",
     meaning: "Tan-man-atma ki gupt raksha. Tona-totka aur nazar ke liye.",
     note: "Roz 11 baar. Face north. Rudraksha ho to aur achha."
+  },
+  {
+    type: "shabar",
+    deity: "Nath",
+    title: "Gorakhnath Vajra Kotha Shabar",
+    preview: "ॐ वज्र में कोठा, वज्र में ताला, वज्र में बंध्या दस्ते द्वारा...",
+    text: "ॐ वज्र में कोठा, वज्र में ताला, वज्र में बंध्या दस्ते द्वारा।\nतहां वज्र का लग्या किवाड़ा, वज्र में चौखट, वज्र में कील।\nजहां से आय, तहां ही जावे। जाने भेजा, जांकू खाए, हमको फेर न सूरत दिखाए।\nहाथ कूँ, नाक कूँ, सिर कूँ, पीठ कूँ, कमर कूँ, छाती कूँ जो जोखो पहुंचाए, तो गुरु गोरखनाथ की आज्ञा फुरे।\nमेरी भक्ति गुरु की शक्ति।\nफुरो मंत्र ईश्वरो वाचा॥",
+    meaning: "Guru Gorakhnath ka siddh vajra-kotha. Tan ke dwar bandhkar anisht wapas bhejne ka prachin tantra shabar.",
+    note: "Roz 27 baar. Face north. Shraddha se. Kisi par hamla mat maango."
+  },
+  {
+    type: "shabar",
+    deity: "Nath",
+    title: "Asana Laganeka Shabar",
+    preview: "सत नमो आदेश। गुरुजी को आदेश। सत्य की धरती सत्य का आकाश...",
+    text: "सत नमो आदेश। गुरुजी को आदेश। ॐ गुरुजी।\nसत्य की धरती सत्य का आकाश। सत्य की माला सत्य की जाप सत्य का आसन सत्य का पूत।\nआसन बैठे योगी अवधूत। आसन ब्रह्मा इन्द्र। आसन बैठे हरि गोविन्द।\nआसन बैठे जपिये जाप कोटि जन्म के उतरन्ते पाप।\nआसन बैठे सिंहासन बैठे बैठे गिरी की छाया।\nपांच तत्व से ले आसन बैठे सतगुरु सत्य का शब्द सुनाया।\nबिना मन्त्र आसन लगाया सो योगी नरक को जाय। मन्त्र पढ़ आसन लगाया सो योगी अमरपुर जाय।\nश्रीनाथ जी गुरुजी को आदेश। आदेश॥",
+    meaning: "Nath tantra ka asana-lagan shabar. Baithne se pehle bhoomi, panch tattva aur satya-shabd ki raksha.",
+    note: "Japa se pehle 1 baar. Asana par pani chhidakkar. Face east ya north."
+  },
+  {
+    type: "shabar",
+    deity: "Nath",
+    title: "Panch Maheshwar Asana Shabar",
+    preview: "सत नमो आदेश, गुरुजी को आदेश, ॐ गुरुजी मन मारू मैदा करू...",
+    text: "सत नमो आदेश, गुरुजी को आदेश।\nॐ गुरुजी मन मारू मैदा करू, करू चकनाचूर।\nपांच महेश्वर आज्ञा करे तो बैठू आसन पूर।\nश्री नाथ जी गुरुजी को आदेश आदेश॥",
+    meaning: "Nath gupt asana-shuddhi. Mann ki mail katkar panch Maheshwar ki agya se baithne ka siddh shabar.",
+    note: "Asana par jal chhidakkar 1 baar. Subah snan ke baad."
+  },
+  {
+    type: "shabar",
+    deity: "Nath",
+    title: "Goraksha Gayatri Shabar",
+    preview: "सत नमो आदेश। अलख निरंजन कौन स्वरूपी बोलिये...",
+    text: "सत नमो आदेश। गुरु जी को आदेश। ॐ गुरु जी।\nअलख निरंजन कौन स्वरूपी बोलिये। अलख निरंजन ज्योति स्वरूपी बोलिये।\nओंकारे शिवरूपी संख्या ने साधुरूपी मध्याहे हंस रूपी हंस परमहंस दो अक्षर गुरु तो गोरक्ष काया तो गायत्री।\nॐ ब्रह्मसोहं शक्ति-शून्य माता अविगत पिता अभय पंथ अचल पदवी निरंजन गोत्र विहंगम जाति असंख्य प्रवर अनन्त शाखा सूक्ष्म वेद आत्मज्ञानी ब्रह्मज्ञानी।\nश्री ॐ गों गोरक्षनाथाय विद्महे शून्य पुत्राय धीमहि तन्नो गोरक्ष निरंजन प्रचोदयात्।\nएता गोरक्ष गायत्री जाप सम्पूर्ण भया। श्री नाथ जी गुरुजी को आदेश। आदेश॥",
+    meaning: "Nath sampradaya ki Goraksha gayatri. Alakh Niranjan aur shunya-putra Goraksha ka gupt tantra paath.",
+    note: "Mula japa se pehle 1 baar. Face north. Satvik raho."
+  },
+  {
+    type: "shabar",
+    deity: "Nath",
+    title: "Shiv Goraksha Mula Shabar",
+    preview: "ॐ शिव गोरक्ष योगी...",
+    text: "ॐ शिव गोरक्ष योगी।\nशिव गोरक्ष।\nसत नमो आदेश। गुरुजी को आदेश।\nॐ सद्गुरुजी, नाथ जी गुरुजी को आदेश।\nआदेश! आदेश! आदेश॥",
+    meaning: "Nath mula shabar. Samadhi, shanti aur atma-vichara jagane ka siddh beeja.",
+    note: "Mala par 108. Subah. Nadi-shuddhi ke saath 11 cycle bhi kiya jaata hai."
+  },
+  {
+    type: "shabar",
+    deity: "Bhairav",
+    title: "Bhairav Pret Bhoot Nashak Shabar",
+    preview: "ॐ नमो भैरव काल भैरव। प्रेत पिशाच डाकिनी शाकिनी...",
+    text: "ॐ नमो भैरव काल भैरव।\nप्रेत पिशाच डाकिनी शाकिनी, जो भी आए सताए, काल भैरव उसे खदेड़ो।\nकाशी नाथ की दुहाई, गोरखनाथ की आन।\nभूत भागे प्रेत भागे।\nफट् फट् स्वाहा॥",
+    meaning: "Kaal Bhairav-Gorakhnath duhai. Raat, pret-bhay aur ghar ki baadha door karne ka tantra shabar.",
+    note: "Ravivaar sandhya 11 baar. Sarson tel ka diya. Himsa ki ichha mat rakho."
+  },
+  {
+    type: "shabar",
+    deity: "Hanuman",
+    title: "Mor Pankh Bhoot Nashak Shabar",
+    preview: "बांधों भूत जहाँ तू उपजो छाड़ो गिर पर्वत चढ़ाई...",
+    text: "बांधों भूत जहाँ तू उपजो छाड़ो गिर पर्वत चढ़ाई।\nसर्ग दुहेली तू जमी। झिलमिलाही हुंकारों हनुमंत पचारई।\nसभी जारि जारि भस्म करें जो चापें सींउ॥",
+    meaning: "Prachin Hanuman mor-pankh shabar. Bhoot-baadha ko bandhkar wapas bhejne ka gupt paath.",
+    note: "Shaam 21 baar. Intention raksha ho. Kisi ka nuksaan mat maango."
+  },
+  {
+    type: "shabar",
+    deity: "Nath",
+    title: "Navnath Svarupa Japa Shabar",
+    preview: "सत नमो आदेश। गुरुजी को आदेश। ॐ गुरुजी ओंकार आदिनाथ...",
+    text: "सत नमो आदेश। गुरुजी को आदेश।\nॐ गुरुजी ओंकार आदिनाथ ओंकार स्वरूप बोलिये।\nउदयनाथ पार्वती धरती स्वरूप बोलिये।\nसत्यनाथ ब्रह्माजी जल स्वरूप बोलिये।\nसंतोषनाथ विष्णुजी खड्ग-खाण्ड तेज स्वरूप बोलिये।\nअचल-अचम्बेनाथ आकाश शेष स्वरूप बोलिये।\nगजबेली गजकण्ठरनाथ गणेशजी गज हस्ती स्वरूप बोलिये।\nज्ञानपारखी सिद्ध चौरंगीनाथ अठारह भार बनस्पति स्वरूप बोलिये।\nमाया रूपी दादा मत्स्येन्द्रनाथ माया स्वरूप बोलिये।\nघटे पिण्डे नव निरन्तरे सम्पूर्ण रक्षा करन्ते श्री शम्भुजती गुरु गोरक्षनाथ बाल स्वरूप बोलिये।\nइतना नवनाथ स्वरूप मन्त्र सम्पूर्ण भया।\nअनन्त कोट सिद्धो में बैठकर गुरु गोरक्षनाथजी ने कहाया नाथजी गुरुजी आदेश॥",
+    meaning: "Navnath svarupa japa. Nav Nath ke roop se ghat-pind ki sampoorna raksha. Gorakhnath tantra ka siddh paath.",
+    note: "Subah 1 ya 3 baar. Face north. Satvik raho."
+  },
+  {
+    type: "shabar",
+    deity: "Nath",
+    title: "Chaurasi Siddha Gayatri Shabar",
+    preview: "सत नमो आदेश। ॐ गंगा गोदा अनुपान शिला, सुमीर बैठे गुरु गोरक्षनाथ बाला...",
+    text: "सत नमो आदेश। गुरुजी को आदेश। ॐ गुरुजी।\nॐ गंगा गोदा अनुपान शिला, सुमीर बैठे गुरु गोरक्षनाथ बाला।\nअनभय पंथ, अनन्त शाखा, ऋद्धि-सिद्धि सिद्धा का मेला।\nॐ कार आदि नाथ तान अनुपम शिष्य, माया मचन्दर, जालन्दर शिष्य।\nसनक-सनातन-सनन्द सिद्ध सनत्कुमार-मार्कण्डेयजी सिद्ध।\nमीन सिद्ध-सिद्ध विरूपाक्ष, सिद्ध श्रृंगेरीपा-चोली घोआ शिष्य।\nमाया पार्वती उदयनाथ सिद्ध शिलनाथ तिण्डिणी योगी सिद्ध।\nकान पा उत्पत्ति गजकर्ण गजकण्ठनाथ, इनकी कथनी, करनी बज्र काया भ्रमर गुफा अमिरस प्याला।\nरक्षा करे शम्भुजती गुरु गोरक्षनाथजी बाला।\nॐ मचन्दर पूता गोरख सिद्ध मंजु तारा शाबर सिद्ध।\nसिद्धासन सिद्ध कालनाथ सिद्ध प्रभुदेव ता प्रकाशनाथ शिष्य।\nनारदा शारदा ता परमानन्द शिष्य, गौरवनाथजी का मेरु सिद्ध संतोषनाथ विष्णुजी गोपाल सिद्ध।\nअचल अचम्बेनाथ शेष सिद्ध, सत्यनाथ ब्रह्माजी जल रूप सिद्ध।\nइनकी योग युगति सांधे काया, काल लागै ना लिपै माया।\nरक्षा करे श्रीशम्भुजती गुरु गोरक्षनाथजी बाला।\nॐ जती गोरख आप विराजे, अपना गुरु आपै चेले।\nचौरासी सिद्धां का भया उजियाला, गोरख कहे निरन्तर मेला।\nयोगी जागो योग, जगाना, अपना मांहीं आफी प्रगटया गुरु शब्द अनहद बाजा।\nरक्षा करे शम्भुजती गुरु गोरक्षनाथजी बाला।\nइतना 9 नाथ 84 सिद्ध नाम लेते, जाप जपन्ते जल में अग्नि प्रगटे।\nजिसकी रक्षा शम्भुजती गुरु गोरक्षनाथजी करे। श्रीनाथजी गुरुजी को आदेश॥",
+    meaning: "Chaurasi siddha gayatri. Navnath aur 84 siddhon ke naam se tan-raksha. Gorakhnath tantra ka gupt paath.",
+    note: "Guruvaar 1 baar. Dheere padho. Himsa ki ichha mat rakho."
+  },
+  {
+    type: "shabar",
+    deity: "Nath",
+    title: "Mahadevi Karya Siddhi Shabar",
+    preview: "ॐ नमो महादेवी सर्वकार्य सिद्धकर्णी जो पाती पुरे...",
+    text: "ॐ नमो महादेवी।\nसर्वकार्य सिद्धकर्णी जो पाती पुरे।\nब्रह्मा विष्णु महेश तीनो देवतन।\nमेरी भक्ति गुरु की शक्ति।\nश्री गुरु गोरखनाथ की दुहाई।\nफुरो मंत्र ईश्वरो वाचा॥",
+    meaning: "Guru Gorakhnath-Mahadevi tantra shabar. Karya siddhi aur raksha. Vashikaran ke liye nahi.",
+    note: "Roz 27 baar. Face north. Satvik. Kisi ka vash mat maango."
+  },
+  {
+    type: "shabar",
+    deity: "Bhairav",
+    title: "Kshetrapal Simha Shabar",
+    preview: "ॐ क्षेत्रपालाय नमः। गाँव खेत घर रक्षको...",
+    text: "ॐ नमो आदेश गुरु को।\nॐ क्षेत्रपालाय नमः।\nगाँव खेत घर रक्षको।\nसीमा सुरक्षित रहे।\nआँगन चौखट क्षेत्रपाल रखवाला।\nगोरखनाथ की आन।\nसत्य नाम क्षेत्रपाल का।\nफुरो मंत्र ईश्वरी वाचा॥",
+    meaning: "Kshetrapal-Bhairav sima raksha. Gaon, khet aur ghar ki hadd bandhne ka prachin tantra shabar.",
+    note: "Ghar ke dwar par 11 baar. Naya ghar ya khet ki hadd par vishesh."
+  },
+  {
+    type: "shabar",
+    deity: "Kali",
+    title: "Jangli Jeev Raksha Shabar",
+    preview: "बाघ बिजुरी सर्प चोर चारिउ बांधौ एक ठौर...",
+    text: "बाघ बिजुरी सर्प चोर चारिउ बांधौ एक ठौर।\nधरती माता आकाश पिता।\nरक्ष रक्ष श्री परमेश्वरी कालिका की वाचा।\nदुहाई महादेव की॥",
+    meaning: "Siddha Shabar granth, raksha-karm. Saanp, chor, bijli aur van-jeev ke bhay ke liye prachin paath.",
+    note: "Sone se pehle 3 baar, 3 taali. Intention raksha ho. Kisi ka nuksaan mat maango."
+  },
+  {
+    type: "shabar",
+    deity: "Hanuman",
+    title: "Ram Chauki Nidra Raksha Shabar",
+    preview: "खाट पड़न धरती मरण या देहि नारायण आपके शरण...",
+    text: "खाट पड़न धरती मरण या देहि नारायण आपके शरण।\nईश्वर की चौकी ब्रह्मा का ताला।\nजहाँ सोवै वहाँ राम रखवाला।\nआस्तिक आस्तिक। चोर सर्प भय सब नास्तिक॥",
+    meaning: "Siddha Shabar granth ka nidra-raksha. Sote samay Ram-chauki, chor aur sarp-bhay ke liye.",
+    note: "Sone se pehle 3 ya 7 baar. 3 taali. Face east ya north."
+  },
+  {
+    type: "shabar",
+    deity: "Hanuman",
+    title: "Daso Dwar Chauki Shabar",
+    preview: "ॐ नमो आदेश गुरु को। वज्र वज्री वज्र किवाड़...",
+    text: "ॐ नमो आदेश गुरु को।\nवज्र वज्री वज्र किवाड़।\nवज्री मैं बांधा दशो द्वार।\nपहली चौकी गणपति की। दूजी चौकी हनुमंत की।\nतीजी चौकी भैरव की। चौथी चौकी राम रक्षा करने की।\nश्री नरसिंह देव जी आए।\nशब्द सांचा पिंड काँचा।\nफुरो मंत्र ईश्वरो वाचा।\nसत्यनाम आदेश गुरु को॥",
+    meaning: "Siddha Shabar granth ka deh-raksha. Daso dwar par Ganpati-Hanumant-Bhairav-Ram-Narsingh ki chauki.",
+    note: "Shanivaar se 11 ya 21 baar. Tel ka diya. Shraddha se."
+  },
+  {
+    type: "shabar",
+    deity: "Kali",
+    title: "Kalika Bhakt Raksha Shabar",
+    preview: "ॐ कालिका खड्ग खप्पर लिये ठाढ़ी...",
+    text: "ॐ कालिका खड्ग खप्पर लिये ठाढ़ी।\nजोत तेरी है निराली।\nपीती भर भर रक्त प्याली।\nकर भक्तों की रखवाली।\nन कर रक्षा तो महाबली भैरव की दुहाई॥",
+    meaning: "Siddha Shabar granth ka Kali raksha-paath. Bhakt ki rakhvali. Himsa ke liye nahi.",
+    note: "11 baar. Apni raksha maango, kisi par hamla mat maango."
+  },
+  {
+    type: "shabar",
+    deity: "Kali",
+    title: "Chor Bandhan Griha Shabar",
+    preview: "ॐ करालिनी स्वाहा। ॐ कपालिनी स्वाहा...",
+    text: "ॐ करालिनी स्वाहा।\nॐ कपालिनी स्वाहा।\nचोर बंधय ठः ठः॥",
+    meaning: "Siddha Shabar granth ka ghar-chor raksha. Dwar bandhkar chori-bhay ke liye.",
+    note: "108 baar siddh. Prayog mein 7 baar. Ghar ke dwar par. Kisi ko nuksaan mat maango."
+  },
+  {
+    type: "shabar",
+    deity: "Kali",
+    title: "Kalika Disha Bandhan Shabar",
+    preview: "ॐ उत्तरा-खण्ड की काली उत्तर को बाँध...",
+    text: "ॐ उत्तरा-खण्ड की काली।\nउत्तर को बाँध। पूरब को बाँध। पच्छिम को बाँध। दक्खिन को बाँध।\nआगा बाँध। पीछा बाँध। घर के चारों कोने बाँध।\nमेरी बाँध न बँधे तो काली माई की फिरै दुहाई।\nशब्द साँचा पिण्ड काँचा।\nफुरे मन्त्र ईश्वरो वाचा॥",
+    meaning: "Siddha Shabar granth ka griha-suraksha. Charon disha aur char kone ki Kalika chauki.",
+    note: "21 din tak 11 baar. Ghar ke beech. Keval japa. Abhichar-kriya mat karo."
+  },
+  {
+    type: "shabar",
+    deity: "Kali",
+    title: "Kamakhya Garbha Raksha Shabar",
+    preview: "ॐ नमो कामरूप कामाख्या देवी जल बांधूं...",
+    text: "ॐ नमो कामरूप कामाख्या देवी।\nजल बांधूं जलवाई बांधूं। बांधूं जल के तीर।\nपांचों दूत कलुआ बांधूं। बांधूं हनुमंत वीर।\nसहदेव की धनुवा अर्जुन का बाण।\nरावण रण को थाम ले। नहीं तो हनुमंत की आन।\nशब्द सांचा पिंड काँचा।\nफुरो मंत्र ईश्वरो वाचा॥",
+    meaning: "Siddha Shabar granth ka garbha-raksha. Kamakhya-Hanumant se garbh ki suraksha.",
+    note: "21 baar. Shraddha se. Doctor ki salah ke saath. Himsa mat maango."
+  },
+  {
+    type: "shabar",
+    deity: "Nath",
+    title: "Gorakhnath Garbha Raksha Shabar",
+    preview: "ॐ नमः आदेश गुरु का। अंग में बांधि राख...",
+    text: "ॐ नमः आदेश गुरु का।\nॐ नमः आदेश अंग में बांधि राख।\nनारसिंह यती मोसते बांधि राख।\nश्री गोरखनाथ कांखते बांधि राख।\nदृढासन देवी यह मन पवन काया को राख।\nथमे गर्भ ओ बांधे घाव।\nथामे माता पार्वती यह गंडो बांध ईश्वर यती।\nजब लग गंडो कंठ पर रहे।\nतब लग गर्भ काया में रहे।\nफुरो मंत्र ईश्वरो वाचा॥",
+    meaning: "Siddha Shabar granth ka Nath garbha-raksha. Gorakhnath-Parvati se garbh ko kaaya mein rakhne ka paath.",
+    note: "21 baar. Shraddha se. Doctor/dawa zaroori. Keval mantra par mat chhodna."
   }
 ];
 
