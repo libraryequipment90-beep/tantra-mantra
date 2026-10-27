@@ -13,6 +13,7 @@ function headerOffset() {
 const pageIds = ["home", "about", "services", "mantras", "testimonials", "blog", "faq", "contact"];
 
 function showPage(id, scroll = true) {
+  if (!document.querySelector(".page-section")) return false;
   const page = pageIds.includes(id) ? id : "home";
   const showAll = page === "home";
   document.body.classList.toggle("home-view", showAll);
@@ -75,6 +76,7 @@ document.querySelectorAll('.header-cta, .hero-btns a, .text-link, .btn-outline')
 });
 
 function showToast(message) {
+  if (!toast) return;
   toast.textContent = message;
   toast.classList.add("show");
   setTimeout(() => toast.classList.remove("show"), 2800);
@@ -512,6 +514,60 @@ const sacredTexts = [
     text: "ॐ नमः आदेश गुरु का।\nॐ नमः आदेश अंग में बांधि राख।\nनारसिंह यती मोसते बांधि राख।\nश्री गोरखनाथ कांखते बांधि राख।\nदृढासन देवी यह मन पवन काया को राख।\nथमे गर्भ ओ बांधे घाव।\nथामे माता पार्वती यह गंडो बांध ईश्वर यती।\nजब लग गंडो कंठ पर रहे।\nतब लग गर्भ काया में रहे।\nफुरो मंत्र ईश्वरो वाचा॥",
     meaning: "Siddha Shabar granth ka Nath garbha-raksha. Gorakhnath-Parvati se garbh ko kaaya mein rakhne ka paath.",
     note: "21 baar. Shraddha se. Doctor/dawa zaroori. Keval mantra par mat chhodna."
+  },
+  {
+    type: "shabar",
+    deity: "Nath",
+    title: "Gorakhnath Nazar Chauki Shabar",
+    preview: "ॐ नमो आदेश गुरु को। उलटंत गोरख पलटंत काया...",
+    text: "ॐ नमो आदेश गुरु को।\nउलटंत गोरख पलटंत काया।\nभाग भाग जमदूत गोरखनाथ आया।\nलोहे की कोठरी वज्र ताली।\nआगे मेरे हरि बसे पाछे देव अनंत।\nरक्षा हे गोरखनाथ जी की चौकी है हनुमंत की॥",
+    meaning: "Siddha Shabar granth ka nazar-raksha. Gorakhnath-Hanumant chauki se buri nazar aur jam-bhay door.",
+    note: "11 baar. Sir se pair tak dheere. Bachchon ke liye vishesh. Himsa mat maango."
+  },
+  {
+    type: "shabar",
+    deity: "Bhairav",
+    title: "Kalabhairav Kapili Jata Shabar",
+    preview: "ॐ काला भैरव कपिली जटा। रात दिन खेले चोपटा...",
+    text: "ॐ काला भैरव कपिली जटा।\nरात दिन खेले चोपटा।\nकाला भस्म और मसान।\nडाकिनी शाकिनी पट्ट सिहारी।\nजरख चढ़ती गोरख मारी।\nछोड़ि छोड़ि रे पापिनी बालक पराया।\nगुरु गोरखनाथ का परवान आया॥",
+    meaning: "Siddha Shabar granth ka Bhairav-Gorakhnath paath. Raat, pret-baadha aur balak-raksha ke liye.",
+    note: "21 baar. Shaam. Intention raksha ho. Kisi par hamla mat maango."
+  },
+  {
+    type: "shabar",
+    deity: "Nath",
+    title: "Navnath Chaurasi Atma Raksha Shabar",
+    preview: "ॐ ह्रीं श्रीं फट् स्वाहा। पर्वत हंस पर्वत स्वामी आत्मरक्षा सदा भवेत्...",
+    text: "ॐ ह्रीं श्रीं फट् स्वाहा।\nपर्वत हंस पर्वत स्वामी आत्मरक्षा सदा भवेत्।\nनौ नाथ चौरासी सिद्धों की दुहाई फुरे॥",
+    meaning: "Siddha Shabar granth. Navnath aur 84 siddhon ki duhai se atma-raksha.",
+    note: "11 ya 21 baar. Face north. Satvik raho."
+  },
+  {
+    type: "shabar",
+    deity: "Hanuman",
+    title: "Narsingh Pind Raksha Shabar",
+    preview: "ॐ नमो आदेश गुरु को। प्रहलाद राखे पाताल राखे...",
+    text: "ॐ नमो आदेश गुरु को।\nप्रहलाद राखे पाताल राखे।\nपाँव देवी जांघ राखे।\nकाली का मस्तक राखे महादेव जी।\nदेव दानव भूत-प्रेत डाकिनी शाकिनी मंडा ताप तिजारी जूड़ी एक पहरू दो पहरू सांझ सबेरे किया कराया उलट वाही के पिंड परे।\nइस पिंड कौ रक्षा श्री नरसिंह जी करे।\nशब्द सांचा पिंड काँचा।\nफुरो मंत्र ईश्वरो वाचा॥",
+    meaning: "Siddha Shabar granth ka Narsingh pind-raksha. Tan ke dwar, taap aur pret-baadha ke liye.",
+    note: "7 ya 21 baar. Shaam. Shraddha se. Himsa ki ichha mat rakho."
+  },
+  {
+    type: "shabar",
+    deity: "Kali",
+    title: "Kali Jadu Tona Nashak Shabar",
+    preview: "जय काली कलकत्ते वाली। जय हनुमान जय चालीस...",
+    text: "जय काली कलकत्ते वाली।\nजय हनुमान जय चालीस, तेरा वचन न जाए खाली।\nजो करे सो पाए खाली।\nअपनी चीज अपना मिल जाए।\nइसी वक्त जादू-टोना यहाँ से भाग जाई।\nमारूं हांक गुरु गोरखनाथ की हांक।\nईश्वर गौरा पार्वती महादेव की दुहाई॥",
+    meaning: "Siddha Shabar granth ka jadu-tona nashak. Kali-Hanuman-Gorakhnath se ghar ki baadha door.",
+    note: "21 baar. Diya jalao. Apni cheez wapas, kisi ka nuksaan nahi."
+  },
+  {
+    type: "shabar",
+    deity: "Shiva",
+    title: "Tona Nashak Disha Bandhan Shabar",
+    preview: "सोम शनिश्वर भौम अगारी। चारि जटा वज्र के वार...",
+    text: "सोम शनिश्वर भौम अगारी कहां चललि देई अंधारी।\nचारि जटा वज्र के वार दीनहि बांधो सोम दुवार।\nउत्तर बांधो कोइला दानव। दक्षिण बांधो क्षेत्रपाल।\nचारि विद्या बांधिके देउ विशेष।\nभंवर गए चलु उत्तरापथ योगिनी। चलु पाताल से वासुकी।\nरामचन्द्र के पायक अंजनी के चीर लागे।\nईश्वर महादेव गौरा पार्वती की दुहाई।\nजो टोना रहे एड़ी पिंड मंत्र पढ़ि फूंके टोना कइल न रहे॥",
+    meaning: "Siddha Shabar granth ka tona-totka nashak. Charon disha bandhkar ghar ki baadha utarne ka paath.",
+    note: "7 baar. Face north. Kisi par hamla mat maango."
   }
 ];
 
@@ -642,5 +698,7 @@ document.getElementById("prevTesti")?.addEventListener("click", () => {
   highlight();
 });
 
-const initialHash = (location.hash || "#home").slice(1);
-showPage(initialHash === "top" ? "home" : initialHash);
+if (document.querySelector(".page-section")) {
+  const initialHash = (location.hash || "#home").slice(1);
+  showPage(initialHash === "top" ? "home" : initialHash);
+}
