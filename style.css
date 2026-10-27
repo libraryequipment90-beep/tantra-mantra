@@ -25,15 +25,19 @@ body {
   line-height: 1.6;
   overflow-x: clip;
 }
+html.mantra-open,
+body.mantra-open {
+  overflow: hidden;
+  height: 100%;
+}
 section[id],
 header[id] {
   scroll-margin-top: 86px;
 }
 .page-section { display: none; }
 .page-section.is-visible { display: block; }
-body.home-view .mantra-sidebar,
-body.home-view .mantra-toolbar { display: none; }
-body.home-view .mantra-library { display: block; }
+body.home-view .mantra-toolbar,
+body.home-view .mantra-meta { display: none; }
 body.home-view .testi-card:nth-child(n+4) { display: none; }
 body.home-view .carousel-nav { display: none; }
 .home-only { display: none; }
@@ -631,286 +635,283 @@ textarea { resize: vertical; min-height: 78px; }
 
 /* Mantras */
 .mantras {
-  background:
-    radial-gradient(ellipse at 12% 0%, rgba(212,160,23,0.08), transparent 42%),
-    var(--cream);
-  padding: 28px 0 80px;
+  background: var(--cream);
+  padding: 18px 0 72px;
 }
-.mantra-library {
-  display: grid;
-  grid-template-columns: 232px 1fr;
-  gap: 28px;
-  align-items: start;
-}
-.mantra-sidebar {
-  position: sticky;
-  top: 98px;
-  background: #fffdf8;
-  border: 1px solid #eadcc8;
-  border-radius: 18px;
-  padding: 18px 16px 20px;
-  box-shadow: 0 10px 28px rgba(80,40,20,0.05);
-}
-.mantra-side-block + .mantra-side-block {
-  margin-top: 18px;
-  padding-top: 16px;
-  border-top: 1px solid #f0e4d4;
-}
-.mantra-side-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
-  color: #8a6a18;
-  margin-bottom: 10px;
-}
-.mantra-cat-list,
-.mantra-deity-list {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.mantra-cat,
-.mantra-deity-btn {
-  width: 100%;
-  text-align: left;
-  border: 0;
-  background: transparent;
-  color: #4a3b32;
-  border-radius: 10px;
-  padding: 8px 10px;
-  font-size: 13.5px;
-  font-weight: 500;
-  transition: 0.18s ease;
-}
-.mantra-cat:hover,
-.mantra-deity-btn:hover {
-  background: #f6efe4;
-  color: #1c120c;
-}
-.mantra-cat.active,
-.mantra-deity-btn.active {
-  background: #1a120c;
-  color: #f3d27a;
-  font-weight: 600;
-}
-.mantra-deity-list {
-  max-height: 340px;
-  overflow: auto;
-  padding-right: 4px;
-}
-.mantra-deity-btn { font-size: 13px; padding: 7px 10px; }
-.mantra-main { min-width: 0; }
 .mantra-toolbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
   margin-bottom: 18px;
 }
-.mantra-search {
-  flex: 1;
+.mantra-filters {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 4px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 4px;
+  border-radius: 999px;
   background: #fff;
-  border: 1px solid #eadcc8;
-  border-radius: 12px;
-  padding: 0 14px;
-  min-height: 46px;
+  border: 1px solid #eadccb;
+  box-shadow: 0 8px 20px rgba(80,40,20,0.04);
 }
-.mantra-search svg {
-  width: 18px;
-  height: 18px;
-  color: #8a7564;
+.chip {
   flex-shrink: 0;
-}
-.mantra-search input {
-  width: 100%;
   border: 0;
-  outline: 0;
   background: transparent;
-  font-size: 14px;
-  color: #1c120c;
-}
-.mantra-search input::placeholder { color: #9a8776; }
-.mantra-count {
-  white-space: nowrap;
+  color: #4a3b32;
+  border-radius: 999px;
+  padding: 8px 16px;
   font-size: 13px;
   font-weight: 600;
-  color: #8a6a18;
+  white-space: nowrap;
+}
+.chip.active {
+  background: #1a120c;
+  color: #f3d27a;
+}
+.mantra-meta {
+  margin: 0 2px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: #8a7564;
+}
+.mantra-empty {
+  grid-column: 1 / -1;
+  padding: 28px 18px;
+  text-align: center;
+  color: var(--muted);
+  background: rgba(255,255,255,0.7);
+  border: 1px dashed #eadccb;
+  border-radius: 16px;
 }
 .mantra-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+  align-items: stretch;
 }
 .mantra-item {
+  position: relative;
   text-align: left;
-  background: #fffdf8;
-  border: 1px solid #eadcc8;
-  border-radius: 16px;
+  background: linear-gradient(180deg, #fffdf8, #fff);
+  border: 1px solid #eee3d4;
+  border-radius: 18px;
   padding: 18px 18px 16px;
   cursor: pointer;
   font: inherit;
   color: inherit;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  min-height: 210px;
-  transition: 0.22s ease;
-  position: relative;
+  gap: 10px;
+  min-height: 168px;
   overflow: hidden;
+  transition: 0.22s ease;
 }
 .mantra-item::before {
   content: "";
   position: absolute;
-  left: 0; top: 0; bottom: 0;
+  inset: 0 auto 0 0;
   width: 3px;
-  background: linear-gradient(180deg, var(--gold), var(--rose));
+  background: linear-gradient(180deg, var(--gold), rgba(212,160,23,0.15));
+  opacity: 0;
+  transition: opacity 0.22s ease;
 }
-.mantra-item:hover {
-  transform: translateY(-3px);
-  border-color: rgba(212,160,23,0.55);
-  box-shadow: 0 16px 32px rgba(80,40,20,0.1);
-}
-.mantra-item-top {
+.mantra-item:hover { transform: translateY(-2px); border-color: rgba(212,160,23,0.45); box-shadow: 0 10px 24px rgba(80,40,20,0.08); }
+.mantra-item:hover::before { opacity: 1; }
+.mantra-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: 10px;
 }
 .mantra-item .tag {
-  font-size: 10px;
-  letter-spacing: 1.2px;
+  font-size: 9.5px;
+  letter-spacing: 1.1px;
   font-weight: 700;
   color: var(--rose);
-  background: rgba(225,29,72,0.08);
+  background: #fdf0f2;
   border-radius: 999px;
-  padding: 4px 8px;
+  padding: 3px 9px;
 }
-.mantra-item .tag.type-stotra { color: #8a6a18; background: rgba(212,160,23,0.14); }
-.mantra-item .tag.type-kavach { color: #2e7d4f; background: rgba(46,125,79,0.1); }
-.mantra-item .tag.type-raksha { color: #9a4a12; background: rgba(196,100,20,0.12); }
-.mantra-item .tag.type-shabar { color: #6b2d5b; background: rgba(107,45,91,0.1); }
-.mantra-item h3 {
-  font-family: var(--display);
-  font-size: 22px;
-  line-height: 1.2;
-  color: #1c120c;
-}
+.mantra-item h3 { font-size: 16.5px; line-height: 1.32; color: #1c120c; }
 .mantra-item .preview {
   color: #6b5b4e;
-  font-size: 14px;
+  font-size: 13.5px;
   font-family: "Noto Sans Devanagari", var(--display);
-  line-height: 1.5;
+  line-height: 1.55;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 .mantra-item .deity-name {
   color: #8a6a18;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.3px;
+  background: #fbf2dd;
+  border-radius: 999px;
+  padding: 3px 9px;
+  white-space: nowrap;
 }
-.mantra-item-cta {
+.mantra-item .view-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid #f1e6d7;
+  font-size: 12px;
+  font-weight: 700;
   color: var(--rose);
-  font-size: 13px;
-  font-weight: 600;
+  letter-spacing: 0.2px;
 }
-.mantra-empty {
-  grid-column: 1 / -1;
-  background: #fffdf8;
-  border: 1px dashed #eadcc8;
-  border-radius: 16px;
-  padding: 36px 20px;
-  text-align: center;
-  color: var(--muted);
-}
+.mantra-item .view-more span { transition: transform 0.2s ease; }
+.mantra-item:hover .view-more span { transform: translateX(3px); }
 .mantra-page {
   position: fixed;
   inset: 0;
   z-index: 320;
-  background: #f6efe4;
-  overflow: auto;
-}
-.mantra-page[hidden] { display: none; }
-.mantra-page-body {
-  width: min(1080px, calc(100% - 32px));
-  margin: 0 auto;
-  padding: 18px 0 48px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  background:
+    radial-gradient(circle at 10% 2%, rgba(212,160,23,0.13), transparent 42%),
+    radial-gradient(circle at 92% 0%, rgba(225,29,72,0.08), transparent 38%),
+    var(--cream);
   color: #1c120c;
 }
-.mantra-page-tools {
+.mantra-page[hidden] { display: none; }
+.mantra-page-inner {
+  width: min(860px, calc(100% - 40px));
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
+.mantra-page-bar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: 12px;
+  margin: 0 calc(50% - 50vw);
+  padding: 10px calc(50vw - 50%);
+  background: rgba(246,239,228,0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(107,91,78,0.1);
+}
+.mantra-bar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid #e3d4c0;
+  background: #fff;
+  color: #3a2b22;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+.mantra-bar-btn svg { width: 15px; height: 15px; }
+.mantra-bar-btn:hover { border-color: rgba(212,160,23,0.6); box-shadow: 0 6px 16px rgba(80,40,20,0.08); }
+.mantra-bar-title {
+  font-family: var(--cinzel);
+  font-size: 11px;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: var(--gold-3);
+}
+.mantra-bar-copy { background: #1a120c; border-color: #1a120c; color: #f3d27a; }
+.mantra-bar-copy:hover { color: #fff8ee; box-shadow: 0 8px 20px rgba(26,18,12,0.25); }
+.mantra-page-body { padding: 18px 0 0; color: #1c120c; }
+.mantra-hero {
+  padding-bottom: 10px;
   margin-bottom: 14px;
 }
-.mantra-page-tools .eyebrow {
-  margin: 0;
-  color: var(--gold-3);
-  font-size: 11px;
-}
-.mantra-page-tools .btn {
-  padding: 7px 14px;
-  font-size: 13px;
-}
-.mantra-page-body h1 {
-  font-family: var(--display);
-  font-size: clamp(32px, 4.4vw, 48px);
-  line-height: 1.15;
-  margin: 0 auto 6px;
-  color: #1c120c;
-  max-width: 760px;
-  text-align: center;
+.mantra-badges { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.mantra-type {
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(225,29,72,0.18);
+  background: rgba(225,29,72,0.08);
+  color: var(--rose);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
 }
 .mantra-deity {
-  color: var(--gold-3);
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(212,160,23,0.28);
+  background: rgba(212,160,23,0.12);
+  color: #8a6a18;
+  font-size: 11.5px;
   font-weight: 600;
-  margin: 0 auto 18px;
-  font-size: 16px;
-  max-width: 760px;
-  text-align: center;
+}
+.mantra-deity[hidden] { display: none; }
+.mantra-hero h1 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -0.3px;
+  color: #1c120c;
+  margin: 0;
+}
+.mantra-script-card {
+  position: relative;
+  margin-bottom: 8px;
+  padding: 28px 32px 36px;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(212,160,23,0.18), transparent 55%),
+    linear-gradient(160deg, #241812, #140d09 65%);
+  box-shadow: 0 20px 44px rgba(40,20,10,0.22);
+  overflow: visible;
+}
+.mantra-script-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(243,210,122,0.22);
+  pointer-events: none;
+}
+.mantra-script-card::after {
+  content: "ॐ";
+  position: absolute;
+  right: 12px;
+  bottom: -28px;
+  font-family: "Noto Sans Devanagari", var(--display);
+  font-size: 120px;
+  line-height: 1;
+  color: rgba(243,210,122,0.06);
+  pointer-events: none;
 }
 .mantra-script {
-  background: #1a120c;
-  color: #f3d27a;
-  border-radius: 16px;
-  padding: 28px 30px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: #f7e3a8;
   font-family: "Noto Sans Devanagari", var(--display);
-  font-size: 20px;
-  line-height: 2.05;
-  margin: 0 auto 22px;
-  display: block;
-  max-width: 760px;
-  text-align: left;
+  font-size: clamp(18px, 2.1vw, 22px);
+  line-height: 1.9;
 }
 .mantra-script .shloka {
   margin: 0;
-  white-space: normal;
+  padding: 2px 0 2px 16px;
+  border-left: 1px solid rgba(212,160,23,0.28);
+  white-space: pre-wrap;
 }
-.mantra-meta {
-  max-width: 760px;
-  margin: 0 auto;
-}
-.mantra-meta-label {
-  display: block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #8a6a18;
-  margin-bottom: 4px;
-}
-.mantra-meaning { color: #4a3b32; font-size: 15px; margin-bottom: 14px; }
-.mantra-note { color: #8a7564; font-size: 13.5px; margin-bottom: 10px; }
-.mantra-free { color: #2e7d4f; font-size: 13px; font-weight: 600; margin-top: 6px; }
-.btn-outline.dark { color: #1c120c; border-color: #cbbba8; }
+.btn-outline.dark { color: #1c120c; border-color: #cbbba8; background: rgba(255,255,255,0.6); }
+.btn-outline.dark:hover { background: #fff; border-color: var(--gold); }
 
 /* Testimonials */
 .testimonials { background: var(--cream-2); padding: 72px 0; }
@@ -1185,24 +1186,6 @@ details p {
 
 @media (max-width: 1100px) {
   .hero-inner, .about-wrap, .contact-wrap { grid-template-columns: 1fr; }
-  .mantra-library { grid-template-columns: 1fr; }
-  .mantra-sidebar {
-    position: static;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-  .mantra-side-block + .mantra-side-block {
-    margin-top: 0;
-    padding-top: 0;
-    border-top: 0;
-  }
-  .mantra-cat-list, .mantra-deity-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-height: none;
-  }
-  .mantra-cat, .mantra-deity-btn { width: auto; }
   .service-grid, .blog-grid, .blog-grid.listing, .mantra-grid { grid-template-columns: repeat(2, 1fr); }
   .main-nav { display: none; }
   .main-nav.open {
@@ -1228,8 +1211,9 @@ details p {
   .hero { min-height: auto; }
   .hero-inner { padding: 42px 0 40px; }
   .trust-row { flex-direction: column; gap: 12px; }
-  .mantra-script { padding: 22px 18px; font-size: 18px; }
-  .mantra-sidebar { grid-template-columns: 1fr; }
-  .mantra-toolbar { flex-direction: column; align-items: stretch; }
-  .mantra-count { text-align: right; }
+  .mantra-script-card { padding: 20px 18px 24px; }
+  .mantra-hero h1 { letter-spacing: -0.2px; }
+  .mantra-page-bar { padding: 10px 0; }
+  .mantra-bar-title { display: none; }
+  .mantra-filters { width: 100%; }
 }

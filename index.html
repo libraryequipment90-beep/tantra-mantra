@@ -257,41 +257,25 @@
 
   <section class="mantras page-section" id="mantras">
     <div class="section-wrap">
-      <div class="section-head">
+      <div class="section-head home-only">
         <div>
-          <p class="eyebrow"><span class="trident">ॐ</span> SIDDH GUPT SHABAR</p>
-          <h2>Prachin Siddh Shabar Mantra</h2>
-          <p class="sub">Sirf prachin, siddh aur gupt Shabar mantra. Guru aadesh, raksha, nazar aur raat-bhay ke liye. Shraddha se padho, kisi ka nuksaan mat maango.</p>
+          <p class="eyebrow"><span class="trident">ॐ</span> SACRED TEXTS</p>
+          <h2>Nath, Dashamahavidya &amp; Tantra Shabar</h2>
         </div>
-        <a class="text-link home-only" href="#mantras">View All Mantras <span>→</span></a>
+        <a class="text-link" href="#mantras">View All Mantras <span>→</span></a>
       </div>
-      <div class="mantra-library">
-        <aside class="mantra-sidebar">
-          <div class="mantra-side-block">
-            <p class="mantra-side-label">Devta</p>
-            <div class="mantra-deity-list" id="deityFilters">
-              <button type="button" class="mantra-deity-btn active" data-deity="all">Sab</button>
-              <button type="button" class="mantra-deity-btn" data-deity="Nath">Nath / Gorakhnath</button>
-              <button type="button" class="mantra-deity-btn" data-deity="Hanuman">Hanuman</button>
-              <button type="button" class="mantra-deity-btn" data-deity="Shiva">Shiva</button>
-              <button type="button" class="mantra-deity-btn" data-deity="Durga">Durga</button>
-              <button type="button" class="mantra-deity-btn" data-deity="Kali">Kali</button>
-              <button type="button" class="mantra-deity-btn" data-deity="Bhairav">Bhairav</button>
-              <button type="button" class="mantra-deity-btn" data-deity="Baglamukhi">Baglamukhi</button>
-            </div>
-          </div>
-        </aside>
-        <div class="mantra-main">
-          <div class="mantra-toolbar">
-            <label class="mantra-search">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="M16.2 16.2 20 20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-              <input type="search" id="mantraSearch" placeholder="Shabar mantra ya devta dhundho..." autocomplete="off" />
-            </label>
-            <p class="mantra-count" id="mantraCount"></p>
-          </div>
-          <div class="mantra-grid" id="mantraGrid"></div>
+
+      <div class="mantra-toolbar">
+        <div class="mantra-filters" id="typeFilters" role="tablist" aria-label="Mantra type">
+          <button type="button" class="chip active" data-type="all">All</button>
+          <button type="button" class="chip" data-type="nath">Nath</button>
+          <button type="button" class="chip" data-type="mahavidya">Mahavidya</button>
+          <button type="button" class="chip" data-type="tantra">Tantra</button>
         </div>
       </div>
+
+      <div class="mantra-meta" id="mantraMeta"></div>
+      <div class="mantra-grid" id="mantraGrid"></div>
     </div>
   </section>
 
@@ -766,23 +750,32 @@
   </footer>
 
   <div class="mantra-page" id="mantraModal" hidden>
-    <article class="mantra-page-body" role="dialog" aria-modal="true" aria-labelledby="mantraModalTitle">
-      <div class="mantra-page-tools">
-        <button class="btn btn-outline dark" id="mantraModalClose" type="button">← Back</button>
-        <p class="eyebrow" id="mantraModalType"></p>
-        <button class="btn btn-outline dark" id="copyMantra" type="button">Copy Text</button>
+    <div class="mantra-page-inner">
+      <div class="mantra-page-bar">
+        <button class="mantra-bar-btn" id="mantraModalClose" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+          Back
+        </button>
+        <span class="mantra-bar-title">Sacred Text</span>
+        <button class="mantra-bar-btn mantra-bar-copy" id="copyMantra" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copy Text
+        </button>
       </div>
-      <h1 id="mantraModalTitle"></h1>
-      <p class="mantra-deity" id="mantraModalDeity"></p>
-      <div class="mantra-script" id="mantraModalText"></div>
-      <div class="mantra-meta">
-        <span class="mantra-meta-label">Arth</span>
-        <p class="mantra-meaning" id="mantraModalMeaning"></p>
-        <span class="mantra-meta-label">Vidhi</span>
-        <p class="mantra-note" id="mantraModalNote"></p>
-        <p class="mantra-free">Sampoorna paath. Free to read and chant. No consultation required.</p>
-      </div>
-    </article>
+      <article class="mantra-page-body" role="dialog" aria-modal="true" aria-labelledby="mantraModalTitle">
+        <header class="mantra-hero">
+          <div class="mantra-badges">
+            <span class="mantra-type" id="mantraModalType"></span>
+            <span class="mantra-deity" id="mantraModalDeity"></span>
+          </div>
+          <h1 id="mantraModalTitle"></h1>
+        </header>
+
+        <section class="mantra-script-card" aria-label="Mantra text">
+          <div class="mantra-script" id="mantraModalText"></div>
+        </section>
+      </article>
+    </div>
   </div>
   <div class="modal-overlay" id="serviceModal" hidden>
     <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
